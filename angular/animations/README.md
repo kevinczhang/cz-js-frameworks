@@ -1,16 +1,16 @@
 # Animations
 
-#### Step 1: Enabling the animations module <a id="step-1-enabling-the-animations-module"></a>
+### Step 1: Enabling the animations module  <a id="step-1-enabling-the-animations-module"></a>
 
- Import [`BrowserAnimationsModule`](https://angular.io/api/platform-browser/animations/BrowserAnimationsModule), which introduces the animation capabilities into your Angular root application module.
+Import [`BrowserAnimationsModule`](https://angular.io/api/platform-browser/animations/BrowserAnimationsModule), which introduces the animation capabilities into your Angular root application module.
 
-#### Step 2: Importing animation functions into component files <a id="step-2-importing-animation-functions-into-component-files"></a>
+### Step 2: Importing animation functions into component files  <a id="step-2-importing-animation-functions-into-component-files"></a>
 
- If you plan to use specific animation functions in component files, import those functions from `@angular/animations`. \( [trigger](https://angular.io/api/animations/trigger), [state](https://angular.io/api/animations/state), [style](https://angular.io/api/animations/style), [animate](https://angular.io/api/animations/animate), [transition](https://angular.io/api/animations/transition)\)
+If you plan to use specific animation functions in component files, import those functions from `@angular/animations`. \( [trigger](https://angular.io/api/animations/trigger), [state](https://angular.io/api/animations/state), [style](https://angular.io/api/animations/style), [animate](https://angular.io/api/animations/animate), [transition](https://angular.io/api/animations/transition)\)
 
-#### Step 3: Adding the animation metadata property <a id="step-3-adding-the-animation-metadata-property"></a>
+### Step 3: Adding the animation metadata property  <a id="step-3-adding-the-animation-metadata-property"></a>
 
- In the component file, add a metadata property called `animations:` within the `@`[`Component`](https://angular.io/api/core/Component)`()` decorator. You put the trigger that defines an animation within the `animations` metadata property.
+In the component file, add a metadata property called `animations:` within the `@`[`Component`](https://angular.io/api/core/Component)`()` decorator. You put the trigger that defines an animation within the `animations` metadata property.
 
 {% code-tabs %}
 {% code-tabs-item title="animations.ts" %}
@@ -60,7 +60,7 @@ export class OpenCloseComponent {
 {% endcode-tabs-item %}
 {% endcode-tabs %}
 
-### Animations API summary <a id="animations-api-summary"></a>
+## Animations API summary  <a id="animations-api-summary"></a>
 
 | Function name | What it does |
 | :--- | :--- |

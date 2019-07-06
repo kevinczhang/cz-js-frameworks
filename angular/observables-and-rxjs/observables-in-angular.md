@@ -8,11 +8,11 @@ description: >-
 
 ## Event emitter
 
- Angular provides an [`EventEmitter`](https://angular.io/api/core/EventEmitter) class that is used when publishing values from a component through the `@`[`Output`](https://angular.io/api/core/Output)`()` decorator. [`EventEmitter`](https://angular.io/api/core/EventEmitter) extends `Observable`, adding an [`emit()`](https://angular.io/api/core/EventEmitter#emit) method so it can send arbitrary values. When you call [`emit()`](https://angular.io/api/core/EventEmitter#emit), it passes the emitted value to the `next()` method of any subscribed observer.
+Angular provides an [`EventEmitter`](https://angular.io/api/core/EventEmitter) class that is used when publishing values from a component through the `@`[`Output`](https://angular.io/api/core/Output)`()` decorator. [`EventEmitter`](https://angular.io/api/core/EventEmitter) extends `Observable`, adding an [`emit()`](https://angular.io/api/core/EventEmitter#emit) method so it can send arbitrary values. When you call [`emit()`](https://angular.io/api/core/EventEmitter#emit), it passes the emitted value to the `next()` method of any subscribed observer.
 
 ## HTTP
 
- Angular’s [`HttpClient`](https://angular.io/api/common/http/HttpClient) returns observables from HTTP method calls. 
+Angular’s [`HttpClient`](https://angular.io/api/common/http/HttpClient) returns observables from HTTP method calls.
 
 * Observables do not mutate the server response \(as can occur through chained `.then()` calls on promises\). Instead, you can use a series of operators to transform values as needed.
 * HTTP requests are cancellable through the [`unsubscribe()`](https://angular.io/api/service-worker/SwPush#unsubscribe) method.
@@ -21,7 +21,7 @@ description: >-
 
 ## Async pipe
 
- The [AsyncPipe](https://angular.io/api/common/AsyncPipe) subscribes to an observable or promise and returns the latest value it has emitted. When a new value is emitted, the pipe marks the component to be checked for changes.
+The [AsyncPipe](https://angular.io/api/common/AsyncPipe) subscribes to an observable or promise and returns the latest value it has emitted. When a new value is emitted, the pipe marks the component to be checked for changes.
 
 ```typescript
 @Component({
@@ -38,7 +38,7 @@ export class AsyncObservablePipeComponent {
 
 ## Router
 
- [`Router.events`](https://angular.io/api/router/Router#events) provides events as observables. You can use the [`filter()`](https://angular.io/api/core/QueryList#filter) operator from RxJS to look for events of interest, and subscribe to them in order to make decisions based on the sequence of events in the navigation process. 
+[`Router.events`](https://angular.io/api/router/Router#events) provides events as observables. You can use the [`filter()`](https://angular.io/api/core/QueryList#filter) operator from RxJS to look for events of interest, and subscribe to them in order to make decisions based on the sequence of events in the navigation process.
 
 {% code-tabs %}
 {% code-tabs-item title="Router events" %}
@@ -89,6 +89,4 @@ export class Routable2Component implements OnInit {
 ```
 {% endcode-tabs-item %}
 {% endcode-tabs %}
-
-
 

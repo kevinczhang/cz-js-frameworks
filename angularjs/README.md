@@ -31,5 +31,3 @@ The legal restrict values are:
 
 By default the value is `EA`, meaning that both Element names and attribute names can invoke the directive.
 
-
-

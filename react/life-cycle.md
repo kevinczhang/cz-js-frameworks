@@ -39,12 +39,12 @@ Each component also provides some other APIs:
 * [setState\(\)](https://reactjs.org/docs/react-component.html#setstate)
 * [forceUpdate\(\)](https://reactjs.org/docs/react-component.html#forceupdate)
 
-#### Class Properties
+### Class Properties
 
 * [defaultProps](https://reactjs.org/docs/react-component.html#defaultprops)
 * [displayName](https://reactjs.org/docs/react-component.html#displayname)
 
-#### Instance Properties
+### Instance Properties
 
 * [props](https://reactjs.org/docs/react-component.html#props)
 * [state](https://reactjs.org/docs/react-component.html#state)

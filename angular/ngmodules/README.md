@@ -29,14 +29,14 @@ The metadata falls into three categories:
 })
 ```
 
-##   JavaScript Modules vs. NgModules
+## JavaScript Modules vs. NgModules
 
 * An NgModule bounds [declarable classes](https://angular.io/guide/ngmodule-faq#q-declarable) only. Declarables are the only classes that matter to the [Angular compiler](https://angular.io/guide/ngmodule-faq#q-angular-compiler).
 * Instead of defining all member classes in one giant file as in a JavaScript module, you list the module's classes in the `@`[`NgModule.declarations`](https://angular.io/api/core/NgModule#declarations) list.
 * An NgModule can only export the [declarable classes](https://angular.io/guide/ngmodule-faq#q-declarable) it owns or imports from other modules. It doesn't declare or export any other kind of class.
 * Unlike JavaScript modules, an NgModule can extend the _entire_ application with services by adding providers to the `@`[`NgModule.providers`](https://angular.io/api/core/NgModule#providers) list.
 
-##  Frequently Used Modules
+## Frequently Used Modules
 
 | NgModule | Import it from | Why you use it |
 | :--- | :--- | :--- |
@@ -49,18 +49,18 @@ The metadata falls into three categories:
 
 ## Entry Components
 
- An entry component is any component that Angular loads imperatively.  You specify an entry component by bootstrapping it in an NgModule, or including it in a routing definition.
+An entry component is any component that Angular loads imperatively. You specify an entry component by bootstrapping it in an NgModule, or including it in a routing definition.
 
 There are two main kinds of entry components:
 
 * The bootstrapped root component.
 * A component you specify in a route definition.
 
-#### `entryComponents` and the compiler <a id="entrycomponents-and-the-compiler"></a>
+### `entryComponents` and the compiler  <a id="entrycomponents-and-the-compiler"></a>
 
- For production apps you want to load the smallest code possible. The code should contain only the classes that you actually need and exclude components that are never used. For this reason, the Angular compiler only generates code for components which are reachable from the `entryComponents`; This means that adding more references to `@`[`NgModule.declarations`](https://angular.io/api/core/NgModule#declarations) does not imply that they will necessarily be included in the final bundle.
+For production apps you want to load the smallest code possible. The code should contain only the classes that you actually need and exclude components that are never used. For this reason, the Angular compiler only generates code for components which are reachable from the `entryComponents`; This means that adding more references to `@`[`NgModule.declarations`](https://angular.io/api/core/NgModule#declarations) does not imply that they will necessarily be included in the final bundle.
 
-##  NgModule FAQs
+## NgModule FAQs
 
 [https://angular.io/guide/ngmodule-faq](https://angular.io/guide/ngmodule-faq)
 

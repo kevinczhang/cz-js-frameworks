@@ -8,7 +8,7 @@ description: >-
 
 ## Built-in Modules
 
- Node.js has a set of built-in modules which you can use without any further installation.
+Node.js has a set of built-in modules which you can use without any further installation.
 
 | Module | Description |
 | :--- | :--- |
@@ -43,7 +43,7 @@ description: >-
 
 ## Include Modules
 
- To include a module, use the `require()` function with the name of the module:
+To include a module, use the `require()` function with the name of the module:
 
 ```java
 var http = require('http');
@@ -56,11 +56,11 @@ http.createServer(function (req, res) {
 
 ## Create Your Own Modules
 
- Use the `exports` keyword to make properties and methods available outside the module file.  
+Use the `exports` keyword to make properties and methods available outside the module file.
 
 Example
 
 Save the code above in a file called "myfirstmodule.js"
 
- **var dt = require\('./myfirstmodule'\);**
+**var dt = require\('./myfirstmodule'\);**
 

@@ -7,9 +7,9 @@ description: >-
 
 # Dependency Providers
 
- You must configure an injector with a provider, or it won't know how to create the dependency.
+You must configure an injector with a provider, or it won't know how to create the dependency.
 
-### The [`Provider`](https://angular.io/api/core/Provider) object literal \(\[{ provide: Logger, useClass: Logger }\]\) <a id="the-provider-object-literal"></a>
+### The [`Provider`](https://angular.io/api/core/Provider) object literal \(\[{ provide: Logger, useClass: Logger }\]\)  <a id="the-provider-object-literal"></a>
 
 The expanded provider configuration is an object literal with two properties.
 
@@ -18,7 +18,7 @@ The expanded provider configuration is an object literal with two properties.
 
 ## Alternative class providers
 
- Different classes can provide the same service. 
+Different classes can provide the same service.
 
 \[{ provide: Logger, useClass: BetterLogger }\]
 
@@ -46,9 +46,9 @@ const silentLogger = {
 };
 ```
 
-#### Non-class dependencies <a id="non-class-dependencies"></a>
+#### Non-class dependencies  <a id="non-class-dependencies"></a>
 
- Not all dependencies are classes. Sometimes you want to inject a string, function, or object.
+Not all dependencies are classes. Sometimes you want to inject a string, function, or object.
 
 ```typescript
 export const HERO_DI_CONFIG: AppConfig = {
@@ -57,7 +57,7 @@ export const HERO_DI_CONFIG: AppConfig = {
 };
 ```
 
- **TypeScript interfaces are not valid tokens**
+**TypeScript interfaces are not valid tokens**
 
 {% code-tabs %}
 {% code-tabs-item title="Solution 1" %}
@@ -78,7 +78,7 @@ export const APP_CONFIG = new InjectionToken<AppConfig>('app.config');
 {% endcode-tabs-item %}
 {% endcode-tabs %}
 
- **For solution 2,** you can inject the configuration object into any constructor that needs it, with the help of an `@`[`Inject`](https://angular.io/api/core/Inject)`()` parameter decorator.
+**For solution 2,** you can inject the configuration object into any constructor that needs it, with the help of an `@`[`Inject`](https://angular.io/api/core/Inject)`()` parameter decorator.
 
 ```typescript
 constructor(@Inject(APP_CONFIG) config: AppConfig) {
@@ -88,7 +88,7 @@ constructor(@Inject(APP_CONFIG) config: AppConfig) {
 
 ## Factory providers
 
- Sometimes you need to create a dependent value dynamically, based on information you won't have until run time. 
+Sometimes you need to create a dependent value dynamically, based on information you won't have until run time.
 
 ```typescript
 let heroServiceFactory = (logger: Logger, userService: UserService) => {
@@ -106,7 +106,7 @@ export let heroServiceProvider =
 
 ## Predefined tokens and multiple providers
 
- Angular provides a number of built-in injection-token constants that you can use to customize the behavior of various systems.
+Angular provides a number of built-in injection-token constants that you can use to customize the behavior of various systems.
 
 A provider object can associate any of these injection tokens with one or more callback functions that take app-specific initialization actions.
 
@@ -114,7 +114,7 @@ A provider object can associate any of these injection tokens with one or more c
 * [APP\_BOOTSTRAP\_LISTENER](https://angular.io/api/core/APP_BOOTSTRAP_LISTENER): Callback is invoked for each component that is bootstrapped. The handler function receives the ComponentRef instance of the bootstrapped component.
 * [APP\_INITIALIZER](https://angular.io/api/core/APP_INITIALIZER): Callback is invoked before an app is initialized. All registered initializers can optionally return a Promise. All initializer functions that return Promises must be resolved before the application is bootstrapped. If one of the initializers fails to resolves, the application is not bootstrapped.
 
- The provider object can have a third option, `multi: true`, which you can use with [`APP_INITIALIZER`](https://angular.io/api/core/APP_INITIALIZER) to register multiple handlers for the provide event.
+  The provider object can have a third option, `multi: true`, which you can use with [`APP_INITIALIZER`](https://angular.io/api/core/APP_INITIALIZER) to register multiple handlers for the provide event.
 
 ```typescript
 export const APP_TOKENS = [
@@ -127,6 +127,4 @@ export const APP_TOKENS = [
 ## Tree-shakable providers
 
 Tree shaking refers to a compiler option that removes code from the final bundle if that code not referenced in an application. When providers are tree-shakable, the Angular compiler removes the associated services from the final output when it determines that they are not used in your application. This significantly reduces the size of your bundles.
-
-
 

@@ -68,7 +68,7 @@ export class VoteTakerComponent {
 {% endcode-tabs-item %}
 {% endcode-tabs %}
 
-## Intercept input property changes with a setter  <a id="intercept-input-property-changes-with-a-setter"></a>
+## Intercept input property changes with a setter   <a id="intercept-input-property-changes-with-a-setter"></a>
 
 Use an input property setter to intercept and act upon a value from the parent.
 
@@ -95,7 +95,7 @@ export class NameChildComponent {
 
 _Input_ properties usually receive data values. _Output_ properties expose event producers, such as [`EventEmitter`](https://angular.io/api/core/EventEmitter) objects.
 
-![](../../.gitbook/assets/image%20%287%29.png)
+![](../../.gitbook/assets/image-7.png)
 
 ## Aliasing input/output properties
 

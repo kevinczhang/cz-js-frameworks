@@ -63,7 +63,7 @@ class Clock extends React.Component {
       date: new Date()
     });
   }
-  
+
   handleClick = () => {
     console.log('this is:', this);
   }
@@ -87,9 +87,9 @@ ReactDOM.render(
 );
 ```
 
-### Using State Correctly <a id="using-state-correctly"></a>
+### Using State Correctly  <a id="using-state-correctly"></a>
 
-#### Do Not Modify State Directly. Use the setState. <a id="do-not-modify-state-directly"></a>
+#### Do Not Modify State Directly. Use the setState.  <a id="do-not-modify-state-directly"></a>
 
 ```text
 this.setState((state, props) => ({
@@ -97,19 +97,19 @@ this.setState((state, props) => ({
 }));
 ```
 
-#### State Updates are Merged <a id="state-updates-are-merged"></a>
+#### State Updates are Merged  <a id="state-updates-are-merged"></a>
 
- When you call `setState()`, React merges the object you provide into the current state.
+When you call `setState()`, React merges the object you provide into the current state.
 
 ## Preventing Component from Rendering
 
-In rare cases you might want a component to hide itself even though it was rendered by another component. To do this return `null` instead of its render output. 
+In rare cases you might want a component to hide itself even though it was rendered by another component. To do this return `null` instead of its render output.
 
 Returning `null` from a component’s `render` method does not affect the firing of the component’s lifecycle methods. For instance `componentDidUpdate` will still be called.
 
 ## Keys
 
- Keys help React identify which items have changed, are added, or are removed. Keys should be given to the elements inside the array to give the elements a stable identity:
+Keys help React identify which items have changed, are added, or are removed. Keys should be given to the elements inside the array to give the elements a stable identity:
 
 ```jsx
 function ListItem(props) {
@@ -138,5 +138,5 @@ ReactDOM.render(
 );
 ```
 
- Keys only make sense in the context of the surrounding array.  Keys used within arrays should be unique among their siblings. However they don’t need to be globally unique. 
+Keys only make sense in the context of the surrounding array. Keys used within arrays should be unique among their siblings. However they don’t need to be globally unique.
 

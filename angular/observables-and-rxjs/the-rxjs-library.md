@@ -9,7 +9,7 @@ description: >-
 
 ## Observable creation functions
 
-###  Create observable examples
+### Create observable examples
 
 {% code-tabs %}
 {% code-tabs-item title="From Stream" %}
@@ -65,9 +65,9 @@ const subscription = mouseMoves.subscribe((evt: MouseEvent) => {
 
 ## Operators
 
- Operators are functions that build on the observables foundation to enable sophisticated manipulation of collections. For example, RxJS defines operators such as [`map()`](https://angular.io/api/core/QueryList#map), [`filter()`](https://angular.io/api/core/QueryList#filter), `concat()`, and `flatMap()`.
+Operators are functions that build on the observables foundation to enable sophisticated manipulation of collections. For example, RxJS defines operators such as [`map()`](https://angular.io/api/core/QueryList#map), [`filter()`](https://angular.io/api/core/QueryList#filter), `concat()`, and `flatMap()`.
 
- You can use _pipes_ to link operators together. Pipes let you combine multiple functions into a single function. The `pipe()` function takes as its arguments the functions you want to combine, and returns a new function that, when executed, runs the composed functions in sequence.
+You can use _pipes_ to link operators together. Pipes let you combine multiple functions into a single function. The `pipe()` function takes as its arguments the functions you want to combine, and returns a new function that, when executed, runs the composed functions in sequence.
 
 ```typescript
 import { filter, map } from 'rxjs/operators';
@@ -82,7 +82,7 @@ const squareOdd = of(1, 2, 3, 4, 5)
 squareOdd.subscribe(x => console.log(x));
 ```
 
-#### Common operators <a id="common-operators"></a>
+#### Common operators  <a id="common-operators"></a>
 
 | AREA | OPERATORS |
 | :--- | :--- |
@@ -95,7 +95,7 @@ squareOdd.subscribe(x => console.log(x));
 
 ## Error handling
 
- In addition to the [`error()`](https://angular.io/api/common/http/testing/TestRequest#error) handler that you provide on subscription, RxJS provides the `catchError`operator that lets you handle known errors in the observable recipe.
+In addition to the [`error()`](https://angular.io/api/common/http/testing/TestRequest#error) handler that you provide on subscription, RxJS provides the `catchError`operator that lets you handle known errors in the observable recipe.
 
 {% code-tabs %}
 {% code-tabs-item title="without retry" %}
@@ -147,7 +147,7 @@ apiData.subscribe({
 
 ## Naming conventions for observables
 
- Although the Angular framework does not enforce a naming convention for observables, you will often see observables named with a trailing “$” sign.
+Although the Angular framework does not enforce a naming convention for observables, you will often see observables named with a trailing “$” sign.
 
 ```typescript
 import { Component } from '@angular/core';

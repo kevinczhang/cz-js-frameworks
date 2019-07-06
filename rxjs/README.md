@@ -17,5 +17,3 @@ The essential concepts in RxJS which solve async event management are:
 * **Subject:** is the equivalent to an EventEmitter, and the only way of multicasting a value or event to multiple Observers.
 * **Schedulers:** are centralized dispatchers to control concurrency, allowing us to coordinate when computation happens on e.g. `setTimeout` or `requestAnimationFrame` or others.
 
-
-

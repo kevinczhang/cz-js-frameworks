@@ -1,6 +1,6 @@
 # Redux
 
-![Redux workflow](../.gitbook/assets/image%20%286%29.png)
+![Redux workflow](../.gitbook/assets/image-6.png)
 
 ## Sample code
 
@@ -21,7 +21,7 @@ function myreducer(state = initState, action) {
       todos: [...state.todos, action.todo]
     }    
   }
-  
+
   if (action.type == 'ADD_POST') {
     return {
       ...state,

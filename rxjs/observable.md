@@ -4,8 +4,6 @@ description: Observables are lazy Push collections of multiple values.
 
 # Observable
 
-
-
 |  | SINGLE | MULTIPLE |
 | :--- | :--- | :--- |
 | Pull | Function | Iterator |

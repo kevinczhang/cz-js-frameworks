@@ -4,9 +4,9 @@
 
 **AngularJS**
 
-The architecture of AngularJS is based on model-view-controller \(MVC\) design. The model is the central component that expresses the application's behavior and manages its data, logic, and rules. The _view_ generates an output based on the information in the _model_. The _controller_ ****accepts input, converts it into commands and sends the commands to the _model_ and the _view_. 
+The architecture of AngularJS is based on model-view-controller \(MVC\) design. The model is the central component that expresses the application's behavior and manages its data, logic, and rules. The _view_ generates an output based on the information in the _model_. The _controller_ _\*\*_accepts input, converts it into commands and sends the commands to the _model_ and the _view_.
 
-**Angular** 
+**Angular**
 
 In Angular, controllers and $scope were replaced by components and directives. Components are directives with a template. They deal with a view of the application and logic on the page. There are two kinds of directives in Angular. These are structural directives that alter the layout of the DOM by removing and replacing its elements, and attributive directives that change the behavior or appearance of a DOM element. For web, mobile web, native mobile and native desktop.
 
@@ -14,18 +14,18 @@ In Angular, controllers and $scope were replaced by components and directives. C
 
 **AngularJS**
 
-AngularJS is written in JavaScript. 
+AngularJS is written in JavaScript.
 
 **Angular**
 
-Angular uses Microsoft’s TypeScript language, which is a superset of ECMAScript 6 \(ES6\). This has the combined advantages of the TypeScript features, like type declarations, and the benefits of ES6, like iterators and lambdas. ****TypeScript have powerful type checking and object-oriented features. 
+Angular uses Microsoft’s TypeScript language, which is a superset of ECMAScript 6 \(ES6\). This has the combined advantages of the TypeScript features, like type declarations, and the benefits of ES6, like iterators and lambdas. _\*\*_TypeScript have powerful type checking and object-oriented features.
 
-##  **Databinding Syntax**
+## **Databinding Syntax**
 
 **AngularJS**
 
 * **ng-model for two way binding.**
-* ng-bind or {{ }} to bind model with html element in one way.
+* ng-bind or  to bind model with html element in one way.
 * The scope is the binding part between the HTML \(view\) and the JavaScript \(controller\).
 
   The scope is an object with the available properties and methods.
@@ -36,15 +36,15 @@ Angular uses Microsoft’s TypeScript language, which is a superset of ECMAScrip
 
 Angular focuses on “\( \)” for event binding and “\[ \]” for property binding.
 
-##  **Module Support**
+## **Module Support**
 
 **AngularJS**
 
- All non-trivial Angular 1.x applications will bootstrap with a root module within an `ng-app` declaration in the main HTML file. A module is created by using the AngularJS function `angular.module`**.  Controllers and directives will be defined in the modules. Child modules will be injected into root module with DJ in constructor.**
+All non-trivial Angular 1.x applications will bootstrap with a root module within an `ng-app` declaration in the main HTML file. A module is created by using the AngularJS function `angular.module`**. Controllers and directives will be defined in the modules. Child modules will be injected into root module with DJ in constructor.**
 
 **Angular**
 
- `ngModule` was introduce to make organizing and connecting components together much easier **with @NgModule annotation.**  The `@NgModule` decorator takes a configuration object that will typically contain imports, component declarations and if it is a top-level module, a reference to the component we want to bootstrap.  And instead of bootstrapping our top-level component directly, we will instead bootstrap our top-level module which is then responsible for delegating the implementation details. In this case, we know that when `AppModule` is instantiated, that it will in turn, instantiate the `AppComponent`.
+`ngModule` was introduce to make organizing and connecting components together much easier **with @NgModule annotation.** The `@NgModule` decorator takes a configuration object that will typically contain imports, component declarations and if it is a top-level module, a reference to the component we want to bootstrap. And instead of bootstrapping our top-level component directly, we will instead bootstrap our top-level module which is then responsible for delegating the implementation details. In this case, we know that when `AppModule` is instantiated, that it will in turn, instantiate the `AppComponent`.
 
 ## Performance
 
@@ -107,7 +107,6 @@ app.controller("myCtrl", function($scope) {
   </body>
 
 </html>
-
 ```
 {% endcode-tabs-item %}
 
@@ -124,7 +123,6 @@ if (environment.production) {
 }
 
 platformBrowserDynamic().bootstrapModule(AppModule);
-
 ```
 {% endcode-tabs-item %}
 
@@ -175,7 +173,6 @@ import { Component } from '@angular/core';
   `
 })
 export class AppComponent { }
-
 ```
 {% endcode-tabs-item %}
 
@@ -203,7 +200,6 @@ export class HeroListComponent implements OnInit {
 
   selectHero(hero: Hero) { this.selectedHero = hero; }
 }
-
 ```
 {% endcode-tabs-item %}
 
@@ -231,7 +227,6 @@ export class HeroService {
     return this.heroes;
   }
 }
-
 ```
 {% endcode-tabs-item %}
 {% endcode-tabs %}

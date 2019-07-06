@@ -117,9 +117,7 @@ Angular creates it, renders it, creates and renders its children, checks it when
     </tr>
   </thead>
   <tbody></tbody>
-</table>Use `ngOnInit()` for two main reasons:
-
-1. To perform complex initializations shortly after construction. \_\_ An `ngOnInit()` is a good place for a component to fetch its initial data. 
+</table>1. To perform complex initializations shortly after construction. \_\_ An `ngOnInit()` is a good place for a component to fetch its initial data. 
 2. To set up the component after Angular sets the input properties.
 
 Don't fetch data in a component constructor. Constructors should do no more than set the initial local variables to simple values.

@@ -15,10 +15,10 @@ Pipeable operators are functions, so they _could_ be used like ordinary function
 
 ```typescript
 obs.pipe(
-	op1(),
-	op2(),
-	op3(),
-	op3(),
+    op1(),
+    op2(),
+    op3(),
+    op3(),
 )
 ```
 

@@ -8,7 +8,7 @@ description: >-
 
 ## Template-driven validation
 
- Every time the value of a form control changes, Angular runs validation and generates either a list of validation errors, which results in an INVALID status, or null, which results in a VALID status.
+Every time the value of a form control changes, Angular runs validation and generates either a list of validation errors, which results in an INVALID status, or null, which results in a VALID status.
 
 ```markup
 <input id="name" name="name" class="form-control"
@@ -60,7 +60,7 @@ export function forbiddenNameValidator(nameRe: RegExp): ValidatorFn {
 {% endcode-tabs-item %}
 
 {% code-tabs-item title="hero-form-reactive.component.ts" %}
-```
+```text
 this.heroForm = new FormGroup({
   'name': new FormControl(this.hero.name, [
     Validators.required,
@@ -74,13 +74,13 @@ this.heroForm = new FormGroup({
 {% endcode-tabs-item %}
 {% endcode-tabs %}
 
- The function is actually a factory that takes a regular expression to detect a _specific_ forbidden name and returns a validator function.
+The function is actually a factory that takes a regular expression to detect a _specific_ forbidden name and returns a validator function.
 
- The `forbiddenNameValidator` factory returns the configured validator function. That function takes an Angular control object and returns _either_ null if the control value is valid _or_ a validation error object. The validation error object typically has a property whose name is the validation key, `'forbiddenName'`, and whose value is an arbitrary dictionary of values that you could insert into an error message, `{name}`.
+The `forbiddenNameValidator` factory returns the configured validator function. That function takes an Angular control object and returns _either_ null if the control value is valid _or_ a validation error object. The validation error object typically has a property whose name is the validation key, `'forbiddenName'`, and whose value is an arbitrary dictionary of values that you could insert into an error message, `{name}`.
 
-#### Adding to template-driven forms <a id="adding-to-template-driven-forms"></a>
+#### Adding to template-driven forms  <a id="adding-to-template-driven-forms"></a>
 
- In template-driven forms, you don't have direct access to the [`FormControl`](https://angular.io/api/forms/FormControl) instance, so you can't pass the validator in like you can for reactive forms. Instead, you need to add a directive to the template.
+In template-driven forms, you don't have direct access to the [`FormControl`](https://angular.io/api/forms/FormControl) instance, so you can't pass the validator in like you can for reactive forms. Instead, you need to add a directive to the template.
 
 {% code-tabs %}
 {% code-tabs-item title="forbidden-name.directive.ts" %}
@@ -149,7 +149,7 @@ export const identityRevealedValidator: ValidatorFn = (control: FormGroup): Vali
 {% endcode-tabs-item %}
 
 {% code-tabs-item title="html" %}
-```
+```text
 <div *ngIf="heroForm.errors?.identityRevealed && (heroForm.touched || heroForm.dirty)" class="cross-validation-error-message alert alert-danger">
     Name cannot match alter ego.
 </div>
@@ -186,7 +186,7 @@ export class IdentityRevealedValidatorDirective implements Validator {
 
 ## Async Validation
 
- Just like synchronous validators have the [`ValidatorFn`](https://angular.io/api/forms/ValidatorFn) and [`Validator`](https://angular.io/api/forms/Validator) interfaces, asynchronous validators have their own counterparts: [`AsyncValidatorFn`](https://angular.io/api/forms/AsyncValidatorFn) and [`AsyncValidator`](https://angular.io/api/forms/AsyncValidator).
+Just like synchronous validators have the [`ValidatorFn`](https://angular.io/api/forms/ValidatorFn) and [`Validator`](https://angular.io/api/forms/Validator) interfaces, asynchronous validators have their own counterparts: [`AsyncValidatorFn`](https://angular.io/api/forms/AsyncValidatorFn) and [`AsyncValidator`](https://angular.io/api/forms/AsyncValidator).
 
 They are very similar with the only difference being:
 
@@ -194,7 +194,7 @@ They are very similar with the only difference being:
 * The observable returned must be finite, meaning it must complete at some point. To convert an infinite observable into a finite one, pipe the observable through a filtering operator such as `first`, `last`, `take`, or `takeUntil`.
 
 {% hint style="info" %}
- It is important to note that the asynchronous validation happens after the synchronous validation, and is performed only if the synchronous validation is successful. 
+It is important to note that the asynchronous validation happens after the synchronous validation, and is performed only if the synchronous validation is successful.
 {% endhint %}
 
 ```typescript

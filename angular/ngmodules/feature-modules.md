@@ -10,17 +10,15 @@ There are five general categories of feature modules which tend to fall into the
 * Service feature modules.
 * Widget feature modules.
 
+| Feature Module | Guidelines |
+| :--- | :--- |
+
+
 <table>
   <thead>
     <tr>
-      <th style="text-align:left">Feature Module</th>
-      <th style="text-align:left">Guidelines</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td style="text-align:left">Domain</td>
-      <td style="text-align:left">
+      <th style="text-align:left">Domain</th>
+      <th style="text-align:left">
         <p>Domain feature modules deliver a user experience dedicated to a particular
           application domain like editing a customer or placing an order.</p>
         <p>They typically have a top component that acts as the feature root and
@@ -33,11 +31,15 @@ There are five general categories of feature modules which tend to fall into the
           feature module.</p>
         <p>They might be imported by the root <code>AppModule</code> of a small application
           that lacks routing.</p>
-      </td>
+      </th>
     </tr>
+  </thead>
+  <tbody></tbody>
+</table><table>
+  <thead>
     <tr>
-      <td style="text-align:left">Routed</td>
-      <td style="text-align:left">
+      <th style="text-align:left">Routed</th>
+      <th style="text-align:left">
         <p>Routed feature modules are domain feature modules whose top components
           are the targets of router navigation routes.</p>
         <p>All lazy-loaded modules are routed feature modules by definition.</p>
@@ -54,11 +56,15 @@ There are five general categories of feature modules which tend to fall into the
             services should be the same as the lifetime of the module. Don&apos;t provide
             application-wide singleton services in a routed feature module or in a
             module that the routed module imports.</p>
-      </td>
+      </th>
     </tr>
+  </thead>
+  <tbody></tbody>
+</table><table>
+  <thead>
     <tr>
-      <td style="text-align:left">Routing</td>
-      <td style="text-align:left">
+      <th style="text-align:left">Routing</th>
+      <th style="text-align:left">
         <p>A routing module provides routing configuration for another module and
           separates routing concerns from its companion module.</p>
         <p>A routing module typically does the following:</p>
@@ -83,11 +89,15 @@ There are five general categories of feature modules which tend to fall into the
             module.</li>
         </ul>
         <p>A routing module should only be imported by its companion module.</p>
-      </td>
+      </th>
     </tr>
+  </thead>
+  <tbody></tbody>
+</table><table>
+  <thead>
     <tr>
-      <td style="text-align:left">Service</td>
-      <td style="text-align:left">
+      <th style="text-align:left">Service</th>
+      <th style="text-align:left">
         <p>Service modules provide utility services such as data access and messaging.
           Ideally, they consist entirely of providers and have no declarations. Angular&apos;s
           <a
@@ -95,11 +105,15 @@ There are five general categories of feature modules which tend to fall into the
             </a>is a good example of a service module.</p>
         <p>The root <code>AppModule</code> is the only module that should import service
           modules.</p>
-      </td>
+      </th>
     </tr>
+  </thead>
+  <tbody></tbody>
+</table><table>
+  <thead>
     <tr>
-      <td style="text-align:left">Widget</td>
-      <td style="text-align:left">
+      <th style="text-align:left">Widget</th>
+      <th style="text-align:left">
         <p>A widget module makes components, directives, and pipes available to external
           modules. Many third-party UI component libraries are widget modules.</p>
         <p>A widget module should consist entirely of declarations, most of them
@@ -107,14 +121,8 @@ There are five general categories of feature modules which tend to fall into the
         <p>A widget module should rarely have providers.</p>
         <p>Import widget modules in any module whose component templates need the
           widgets.</p>
-      </td>
+      </th>
     </tr>
-  </tbody>
-</table>| Feature Module | Declarations | Providers | Exports | Imported by |
-| :--- | :--- | :--- | :--- | :--- |
-| Domain | Yes | Rare | Top component | Feature, AppModule |
-| Routed | Yes | Rare | No | None |
-| Routing | No | Yes \(Guards\) | RouterModule | Feature \(for routing\) |
-| Service | No | Yes | No | AppModule |
-| Widget | Yes | Rare | Yes | Feature |
-
+  </thead>
+  <tbody></tbody>
+</table>
