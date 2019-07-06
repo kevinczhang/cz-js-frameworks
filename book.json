@@ -1,0 +1,32 @@
+{
+    "title": "First gitbook tutorial",
+    "description": "First gitbook tutorial description. Following https://janicezhw.github.io/gitbook/startusegitbook/configInfo/bookjson.html",
+
+    "plugins": ["theme-api", "collapsible-menu"],
+
+    "pluginsConfig": {
+        "fontSettings": {
+            "theme": "night",
+            "family": "serif",
+            "size": 4
+        },
+        "theme-api": {
+            "theme": "dark"
+        }
+    },
+
+    "variables": {},
+
+    "links": {
+        "sidebar": {
+            "Angular official doc": "https://angular.io/docs"
+        },
+        "sharing": {
+            "google": null,
+            "facebook": null,
+            "twitter": null,
+            "weibo": null,
+            "all": null
+        }
+    }
+}
