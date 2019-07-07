@@ -31,6 +31,8 @@
   * [Animations](angular/animations/README.md)
     * [Transitions and triggers](angular/animations/transitions-and-triggers.md)
     * [Complex animation sequences](angular/animations/complex-animation-sequences.md)
+  * [Unit testing](angular/unit-testing/README.md)
+    * [Angular Test Bed](angular/unit-testing/angular-test-bed.md)
 * [AngularJS](angularjs/README.md)
   * [AngularJS Vs. Angular](angularjs/angularjs-vs.-angular.md)
 * [React](react/README.md)
