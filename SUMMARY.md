@@ -33,6 +33,7 @@
     * [Complex animation sequences](angular/animations/complex-animation-sequences.md)
   * [Unit testing](angular/unit-testing/README.md)
     * [Angular Test Bed](angular/unit-testing/angular-test-bed.md)
+    * [Http and async](angular/unit-testing/http-and-async.md)
 * [AngularJS](angularjs/README.md)
   * [AngularJS Vs. Angular](angularjs/angularjs-vs.-angular.md)
 * [React](react/README.md)
