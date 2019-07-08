@@ -29,6 +29,7 @@
     * [Dependency Injection in Action](angular/dependency-injection/dependency-injection-in-action.md)
     * [Dependency Providers](angular/dependency-injection/dependency-providers.md)
   * [HttpClient](angular/httpclient.md)
+  * [Routing & Navigation](angular/routing-and-navigation.md)
   * [Animations](angular/animations/README.md)
     * [Transitions and triggers](angular/animations/transitions-and-triggers.md)
     * [Complex animation sequences](angular/animations/complex-animation-sequences.md)
