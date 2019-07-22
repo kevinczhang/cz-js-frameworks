@@ -61,3 +61,25 @@ export class CountdownViewChildParentComponent implements AfterViewInit {
 }
 ```
 
+### @ViewChild
+
+The view children of a given component are the elements used _within_ its template, its view. We can get a reference to these view children in our component class by using the `@ViewChild` decorator.  This decorator tells Angular _how_ to find the child component that we want to bind to this property.  The parameter we pass as the first argument to `@ViewChild` is the _type_ of the component we want to search for, if it finds more than one it will just give us the first one it finds.
+
+```text
+@ViewChild(JokeComponent) jokeViewChild: JokeComponent;
+```
+
+### @ViewChildren
+
+ We use the `@ViewChildren` decorator which matches _all_  ``JokeComponent`s and stores them in a `QueryList`` called jokeViewChildren.
+
+```text
+@ViewChildren(JokeComponent) jokeViewChildren: QueryList<JokeComponent>;
+```
+
+## ContentChild & ContentChildren
+
+The concept of a _content child_ is similar to that of a _view child_ but the content children of the given component are the child elements that are _projected_ into the component from the host component.
+
+
+

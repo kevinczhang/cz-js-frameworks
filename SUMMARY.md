@@ -2,6 +2,8 @@
 
 * [Introduction](README.md)
 * [Angular](angular/README.md)
+  * [CLI Commands](angular/cli-commands/README.md)
+    * [ng generate](angular/cli-commands/ng-generate.md)
   * [Architecture](angular/chapter1/README.md)
     * [Introduction to modules](angular/chapter1/introtomodules.md)
     * [Introduction to components](angular/chapter1/introtocomponents.md)
