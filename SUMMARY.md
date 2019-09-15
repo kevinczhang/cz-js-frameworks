@@ -17,6 +17,7 @@
     * [User Input](angular/chapter2/user-input.md)
     * [Lifecycle Hooks](angular/chapter2/lifecycle-hooks.md)
     * [Pipes](angular/chapter2/pipes.md)
+    * [Dynamic Component Loader](angular/chapter2/dynamic-component-loader.md)
   * [Forms](angular/forms/README.md)
     * [Reactive Forms](angular/forms/reactive-forms.md)
     * [Form Validation](angular/forms/form-validation.md)
