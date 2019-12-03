@@ -1,4 +1,8 @@
-# Template reference variables \( \#var \)
+---
+description: '#var'
+---
+
+# Template reference variables
 
 A **template reference variable** is often a reference to a DOM element within a template. It can also be a reference to an Angular component or directive or a [web component](https://developer.mozilla.org/en-US/docs/Web/Web_Components). You can refer to a template reference variable _anywhere_ in the template.
 

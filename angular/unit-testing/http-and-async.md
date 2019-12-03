@@ -2,8 +2,8 @@
 
 Example codes to be tested
 
-{% code-tabs %}
-{% code-tabs-item title="auth.service.ts" %}
+{% tabs %}
+{% tab title="auth.service.ts" %}
 ```typescript
 export class AuthService {
     isAuthenticated(): Promise<boolean> {
@@ -12,9 +12,9 @@ turn Promise.resolve(!!localStorage.getItem('token'));
     }
 }
 ```
-{% endcode-tabs-item %}
+{% endtab %}
 
-{% code-tabs-item title="login.component.ts" %}
+{% tab title="login.component.ts" %}
 ```typescript
 import { Component } from '@angular/core';
 import { AuthService } from "./auth.service";
@@ -42,8 +42,8 @@ export class LoginComponent implements OnInit {
   }
 }
 ```
-{% endcode-tabs-item %}
-{% endcode-tabs %}
+{% endtab %}
+{% endtabs %}
 
 ### `fakeAsync` and `tick`
 

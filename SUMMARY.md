@@ -12,7 +12,7 @@
     * [Data binding](angular/chapter2/data_binding.md)
     * [Directives](angular/chapter2/built-in-directives.md)
     * [Custom directive](angular/chapter2/custom-directive.md)
-    * [Template reference variables \( \#var \)](angular/chapter2/template-reference-variables-var.md)
+    * [Template reference variables](angular/chapter2/template-reference-variables-var.md)
     * [Input and Output properties](angular/chapter2/input-and-output-properties.md)
     * [User Input](angular/chapter2/user-input.md)
     * [Lifecycle Hooks](angular/chapter2/lifecycle-hooks.md)

@@ -59,24 +59,24 @@ export const HERO_DI_CONFIG: AppConfig = {
 
 **TypeScript interfaces are not valid tokens**
 
-{% code-tabs %}
-{% code-tabs-item title="Solution 1" %}
+{% tabs %}
+{% tab title="Solution 1" %}
 ```typescript
 providers: [
   UserService,
   { provide: APP_CONFIG, useValue: HERO_DI_CONFIG }
 ],
 ```
-{% endcode-tabs-item %}
+{% endtab %}
 
-{% code-tabs-item title="Solution 2" %}
+{% tab title="Solution 2" %}
 ```typescript
 import { InjectionToken } from '@angular/core';
 
 export const APP_CONFIG = new InjectionToken<AppConfig>('app.config');
 ```
-{% endcode-tabs-item %}
-{% endcode-tabs %}
+{% endtab %}
+{% endtabs %}
 
 **For solution 2,** you can inject the configuration object into any constructor that needs it, with the help of an `@`[`Inject`](https://angular.io/api/core/Inject)`()` parameter decorator.
 

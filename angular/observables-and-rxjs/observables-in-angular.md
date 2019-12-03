@@ -40,8 +40,8 @@ export class AsyncObservablePipeComponent {
 
 [`Router.events`](https://angular.io/api/router/Router#events) provides events as observables. You can use the [`filter()`](https://angular.io/api/core/QueryList#filter) operator from RxJS to look for events of interest, and subscribe to them in order to make decisions based on the sequence of events in the navigation process.
 
-{% code-tabs %}
-{% code-tabs-item title="Router events" %}
+{% tabs %}
+{% tab title="Router events" %}
 ```typescript
 import { Router, NavigationStart } from '@angular/router';
 import { filter } from 'rxjs/operators';
@@ -67,9 +67,9 @@ export class Routable1Component implements OnInit {
   }
 }
 ```
-{% endcode-tabs-item %}
+{% endtab %}
 
-{% code-tabs-item title="ActivatedRoute" %}
+{% tab title="ActivatedRoute" %}
 ```typescript
 import { ActivatedRoute } from '@angular/router';
 
@@ -87,6 +87,6 @@ export class Routable2Component implements OnInit {
   }
 }
 ```
-{% endcode-tabs-item %}
-{% endcode-tabs %}
+{% endtab %}
+{% endtabs %}
 

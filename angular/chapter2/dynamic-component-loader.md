@@ -75,16 +75,16 @@ export class AdBannerComponent implements OnInit, OnDestroy {
 
 ### The Dynamic _AdComponent_ interface <a id="the-adcomponent-interface"></a>
 
-{% code-tabs %}
-{% code-tabs-item title="ad.component.ts" %}
+{% tabs %}
+{% tab title="ad.component.ts" %}
 ```typescript
 export interface AdComponent {
   data: any;
 }
 ```
-{% endcode-tabs-item %}
+{% endtab %}
 
-{% code-tabs-item title="hero-job-ad.component.ts" %}
+{% tab title="hero-job-ad.component.ts" %}
 ```typescript
 import { Component, Input } from '@angular/core';
 
@@ -104,9 +104,9 @@ export class HeroJobAdComponent implements AdComponent {
 
 }
 ```
-{% endcode-tabs-item %}
+{% endtab %}
 
-{% code-tabs-item title="hero-profile.component.ts" %}
+{% tab title="hero-profile.component.ts" %}
 ```typescript
 import { Component, Input }  from '@angular/core';
 
@@ -128,6 +128,6 @@ export class HeroProfileComponent implements AdComponent {
   @Input() data: any;
 }
 ```
-{% endcode-tabs-item %}
-{% endcode-tabs %}
+{% endtab %}
+{% endtabs %}
 

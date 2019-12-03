@@ -23,8 +23,8 @@ An attribute directive minimally requires building a controller class annotated 
 ng generate directive highlight
 ```
 
-{% code-tabs %}
-{% code-tabs-item title="app/app.component.ts" %}
+{% tabs %}
+{% tab title="app/app.component.ts" %}
 ```typescript
 import { Component } from '@angular/core';
 
@@ -36,9 +36,9 @@ export class AppComponent {
   color: string;
 }
 ```
-{% endcode-tabs-item %}
+{% endtab %}
 
-{% code-tabs-item title="app/app.component.html" %}
+{% tab title="app/app.component.html" %}
 ```markup
 <h1>My First Attribute Directive</h1>
 
@@ -54,9 +54,9 @@ export class AppComponent {
   Highlight me too!
 </p>
 ```
-{% endcode-tabs-item %}
+{% endtab %}
 
-{% code-tabs-item title="app/highlight.directive.ts" %}
+{% tab title="app/highlight.directive.ts" %}
 ```typescript
 /* tslint:disable:member-ordering */
 import { Directive, ElementRef, HostListener, Input } from '@angular/core';
@@ -85,9 +85,9 @@ export class HighlightDirective {
   }
 }
 ```
-{% endcode-tabs-item %}
+{% endtab %}
 
-{% code-tabs-item title="app/app.module.ts" %}
+{% tab title="app/app.module.ts" %}
 ```typescript
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
@@ -105,8 +105,8 @@ import { HighlightDirective } from './highlight.directive';
 })
 export class AppModule { }
 ```
-{% endcode-tabs-item %}
-{% endcode-tabs %}
+{% endtab %}
+{% endtabs %}
 
 It's the brackets \(`[]`\) that make it an attribute selector.
 
@@ -140,8 +140,8 @@ The &lt;ng-template&gt; is an Angular element for rendering HTML. It is never di
 
 The Angular `<ng-container>` is a grouping element that doesn't interfere with styles or layout because Angular _doesn't put it in the DOM_. \_\_ The `<ng-container>` is a syntax element recognized by the Angular parser. It's not a directive, component, class, or interface. It's more like the curly braces in a JavaScript `if`-block. Without those braces, JavaScript would only execute the first statement when you intend to conditionally execute all of them as a single block. The `<ng-container>` satisfies a similar need in Angular templates.
 
-{% code-tabs %}
-{% code-tabs-item title="ngif-ngcontainer" %}
+{% tabs %}
+{% tab title="ngif-ngcontainer" %}
 ```markup
 <p>
   I turned the corner
@@ -151,9 +151,9 @@ The Angular `<ng-container>` is a grouping element that doesn't interfere with s
   and continued on my way.
 </p>
 ```
-{% endcode-tabs-item %}
+{% endtab %}
 
-{% code-tabs-item title="select-ngcontainer" %}
+{% tab title="select-ngcontainer" %}
 ```markup
 <div>
   Pick your favorite hero
@@ -167,8 +167,8 @@ The Angular `<ng-container>` is a grouping element that doesn't interfere with s
   </ng-container>
 </select>
 ```
-{% endcode-tabs-item %}
-{% endcode-tabs %}
+{% endtab %}
+{% endtabs %}
 
 ### Built-in _structural_ directives
 
@@ -201,8 +201,8 @@ A simple structural directive like this one creates an [_embedded view_](https:/
 
 You'll acquire the `<ng-template>` contents with a [`TemplateRef`](https://angular.io/api/core/TemplateRef) and access the _view container_ through a[`ViewContainerRef`](https://angular.io/api/core/ViewContainerRef).
 
-{% code-tabs %}
-{% code-tabs-item title="unless.directive.ts" %}
+{% tabs %}
+{% tab title="unless.directive.ts" %}
 ```typescript
 import { Directive, Input, TemplateRef, ViewContainerRef } from '@angular/core';
 
@@ -228,9 +228,9 @@ export class UnlessDirective {
   }
 }
 ```
-{% endcode-tabs-item %}
+{% endtab %}
 
-{% code-tabs-item title="app.component.html" %}
+{% tab title="app.component.html" %}
 ```markup
 <p *appUnless="condition" class="unless a">
   (A) This paragraph is displayed because the condition is false.
@@ -241,6 +241,6 @@ export class UnlessDirective {
   this paragraph is displayed because appUnless is set to false.
 </p>
 ```
-{% endcode-tabs-item %}
-{% endcode-tabs %}
+{% endtab %}
+{% endtabs %}
 

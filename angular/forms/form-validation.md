@@ -46,8 +46,8 @@ There are two types of validator functions: sync validators and async validators
 
 ## Custom validators
 
-{% code-tabs %}
-{% code-tabs-item title="forbiddenNameValidator" %}
+{% tabs %}
+{% tab title="forbiddenNameValidator" %}
 ```typescript
 /** A hero's name can't match the given regular expression */
 export function forbiddenNameValidator(nameRe: RegExp): ValidatorFn {
@@ -57,9 +57,9 @@ export function forbiddenNameValidator(nameRe: RegExp): ValidatorFn {
   };
 }
 ```
-{% endcode-tabs-item %}
+{% endtab %}
 
-{% code-tabs-item title="hero-form-reactive.component.ts" %}
+{% tab title="hero-form-reactive.component.ts" %}
 ```text
 this.heroForm = new FormGroup({
   'name': new FormControl(this.hero.name, [
@@ -71,8 +71,8 @@ this.heroForm = new FormGroup({
   'power': new FormControl(this.hero.power, Validators.required)
 });
 ```
-{% endcode-tabs-item %}
-{% endcode-tabs %}
+{% endtab %}
+{% endtabs %}
 
 The function is actually a factory that takes a regular expression to detect a _specific_ forbidden name and returns a validator function.
 
@@ -82,8 +82,8 @@ The `forbiddenNameValidator` factory returns the configured validator function. 
 
 In template-driven forms, you don't have direct access to the [`FormControl`](https://angular.io/api/forms/FormControl) instance, so you can't pass the validator in like you can for reactive forms. Instead, you need to add a directive to the template.
 
-{% code-tabs %}
-{% code-tabs-item title="forbidden-name.directive.ts" %}
+{% tabs %}
+{% tab title="forbidden-name.directive.ts" %}
 ```typescript
 @Directive({
   selector: '[appForbiddenName]',
@@ -98,16 +98,16 @@ export class ForbiddenValidatorDirective implements Validator {
   }
 }
 ```
-{% endcode-tabs-item %}
+{% endtab %}
 
-{% code-tabs-item title="hero-form-template.component.html" %}
+{% tab title="hero-form-template.component.html" %}
 ```markup
 <input id="name" name="name" class="form-control"
       required minlength="4" appForbiddenName="bob"
       [(ngModel)]="hero.name" #name="ngModel" >
 ```
-{% endcode-tabs-item %}
-{% endcode-tabs %}
+{% endtab %}
+{% endtabs %}
 
 ## Control status CSS classes
 
@@ -125,8 +125,8 @@ The following classes are currently supported:
 
 ### Adding to reactive forms
 
-{% code-tabs %}
-{% code-tabs-item title="component" %}
+{% tabs %}
+{% tab title="component" %}
 ```typescript
 const heroForm = new FormGroup({
   'name': new FormControl(),
@@ -134,9 +134,9 @@ const heroForm = new FormGroup({
   'power': new FormControl()
 }, { validators: identityRevealedValidator });
 ```
-{% endcode-tabs-item %}
+{% endtab %}
 
-{% code-tabs-item title="directive" %}
+{% tab title="directive" %}
 ```typescript
 /** A hero's name can't match the hero's alter ego */
 export const identityRevealedValidator: ValidatorFn = (control: FormGroup): ValidationErrors | null => {
@@ -146,21 +146,21 @@ export const identityRevealedValidator: ValidatorFn = (control: FormGroup): Vali
   return name && alterEgo && name.value === alterEgo.value ? { 'identityRevealed': true } : null;
 };
 ```
-{% endcode-tabs-item %}
+{% endtab %}
 
-{% code-tabs-item title="html" %}
+{% tab title="html" %}
 ```text
 <div *ngIf="heroForm.errors?.identityRevealed && (heroForm.touched || heroForm.dirty)" class="cross-validation-error-message alert alert-danger">
     Name cannot match alter ego.
 </div>
 ```
-{% endcode-tabs-item %}
-{% endcode-tabs %}
+{% endtab %}
+{% endtabs %}
 
 ### Adding to template driven forms
 
-{% code-tabs %}
-{% code-tabs-item title="identity-revealed.directive.ts" %}
+{% tabs %}
+{% tab title="identity-revealed.directive.ts" %}
 ```typescript
 @Directive({
   selector: '[appIdentityRevealed]',
@@ -172,17 +172,17 @@ export class IdentityRevealedValidatorDirective implements Validator {
   }
 }
 ```
-{% endcode-tabs-item %}
+{% endtab %}
 
-{% code-tabs-item title="hero-form-template.component.html" %}
+{% tab title="hero-form-template.component.html" %}
 ```markup
 <form #heroForm="ngForm" appIdentityRevealed>
 <div *ngIf="heroForm.errors?.identityRevealed && (heroForm.touched || heroForm.dirty)" class="cross-validation-error-message alert alert-danger">
     Name cannot match alter ego.
 </div>
 ```
-{% endcode-tabs-item %}
-{% endcode-tabs %}
+{% endtab %}
+{% endtabs %}
 
 ## Async Validation
 

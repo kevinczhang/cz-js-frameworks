@@ -12,8 +12,8 @@ If you plan to use specific animation functions in component files, import those
 
 In the component file, add a metadata property called `animations:` within the `@`[`Component`](https://angular.io/api/core/Component)`()` decorator. You put the trigger that defines an animation within the `animations` metadata property.
 
-{% code-tabs %}
-{% code-tabs-item title="animations.ts" %}
+{% tabs %}
+{% tab title="animations.ts" %}
 ```typescript
 @Component({
   selector: 'app-open-close',
@@ -51,14 +51,14 @@ export class OpenCloseComponent {
 
 }
 ```
-{% endcode-tabs-item %}
+{% endtab %}
 
-{% code-tabs-item title="animations.html" %}
+{% tab title="animations.html" %}
 ```markup
 <div [@triggerName]="expression">...</div>;
 ```
-{% endcode-tabs-item %}
-{% endcode-tabs %}
+{% endtab %}
+{% endtabs %}
 
 ## Animations API summary  <a id="animations-api-summary"></a>
 

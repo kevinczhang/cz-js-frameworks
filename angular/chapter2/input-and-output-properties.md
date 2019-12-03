@@ -14,8 +14,8 @@ An _Output_ property is an _observable_ property annotated with an `@`[`Output`]
 All data bound properties must be TypeScript _public_ properties. Angular never binds to a TypeScript _private_ property.
 {% endhint %}
 
-{% code-tabs %}
-{% code-tabs-item title="voter.component.ts" %}
+{% tabs %}
+{% tab title="voter.component.ts" %}
 ```typescript
 import { Component, EventEmitter, Input, Output } from '@angular/core';
 
@@ -38,9 +38,9 @@ export class VoterComponent {
   }
 }
 ```
-{% endcode-tabs-item %}
+{% endtab %}
 
-{% code-tabs-item title="votetaker.component.ts" %}
+{% tab title="votetaker.component.ts" %}
 ```text
 import { Component }      from '@angular/core';
 
@@ -65,8 +65,8 @@ export class VoteTakerComponent {
   }
 }
 ```
-{% endcode-tabs-item %}
-{% endcode-tabs %}
+{% endtab %}
+{% endtabs %}
 
 ## Intercept input property changes with a setter   <a id="intercept-input-property-changes-with-a-setter"></a>
 

@@ -11,17 +11,17 @@ description: >-
 
 DOM events carry a payload of information that may be useful to the component.
 
-{% code-tabs %}
-{% code-tabs-item title="keyup.components.ts" %}
+{% tabs %}
+{% tab title="keyup.components.ts" %}
 ```markup
 template: `
   <input (keyup)="onKey($event)">
   <p>{{values}}</p>
 `
 ```
-{% endcode-tabs-item %}
+{% endtab %}
 
-{% code-tabs-item title="keyup.components.ts" %}
+{% tab title="keyup.components.ts" %}
 ```typescript
 export class KeyUpComponent_v1 {
   values = '';
@@ -31,9 +31,9 @@ export class KeyUpComponent_v1 {
   }
 }
 ```
-{% endcode-tabs-item %}
+{% endtab %}
 
-{% code-tabs-item title="Typed\_event" %}
+{% tab title="Typed\_event" %}
 ```typescript
 export class KeyUpComponent_v1 {
   values = '';
@@ -44,8 +44,8 @@ export class KeyUpComponent_v1 {
   }
 }
 ```
-{% endcode-tabs-item %}
-{% endcode-tabs %}
+{% endtab %}
+{% endtabs %}
 
 ### Get user input from a template reference variable   <a id="get-user-input-from-a-template-reference-variable"></a>
 

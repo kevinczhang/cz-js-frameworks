@@ -11,8 +11,8 @@ description: >-
 
 ### Create observable examples
 
-{% code-tabs %}
-{% code-tabs-item title="From Stream" %}
+{% tabs %}
+{% tab title="From Stream" %}
 ```typescript
 import { fromPromise } from 'rxjs';
 
@@ -25,9 +25,9 @@ data.subscribe({
  complete() { console.log('Completed'); }
 });
 ```
-{% endcode-tabs-item %}
+{% endtab %}
 
-{% code-tabs-item title=" from a counter" %}
+{% tab title=" from a counter" %}
 ```typescript
 import { interval } from 'rxjs';
 
@@ -37,9 +37,9 @@ const secondsCounter = interval(1000);
 secondsCounter.subscribe(n =>
   console.log(`It's been ${n} seconds since subscribing!`));
 ```
-{% endcode-tabs-item %}
+{% endtab %}
 
-{% code-tabs-item title="from an event" %}
+{% tab title="from an event" %}
 ```typescript
 import { fromEvent } from 'rxjs';
 
@@ -60,8 +60,8 @@ const subscription = mouseMoves.subscribe((evt: MouseEvent) => {
   }
 });
 ```
-{% endcode-tabs-item %}
-{% endcode-tabs %}
+{% endtab %}
+{% endtabs %}
 
 ## Operators
 
@@ -97,8 +97,8 @@ squareOdd.subscribe(x => console.log(x));
 
 In addition to the [`error()`](https://angular.io/api/common/http/testing/TestRequest#error) handler that you provide on subscription, RxJS provides the `catchError`operator that lets you handle known errors in the observable recipe.
 
-{% code-tabs %}
-{% code-tabs-item title="without retry" %}
+{% tabs %}
+{% tab title="without retry" %}
 ```typescript
 import { ajax } from 'rxjs/ajax';
 import { map, catchError } from 'rxjs/operators';
@@ -119,9 +119,9 @@ apiData.subscribe({
   error(err) { console.log('errors already caught... will not run'); }
 });
 ```
-{% endcode-tabs-item %}
+{% endtab %}
 
-{% code-tabs-item title="with retry 3" %}
+{% tab title="with retry 3" %}
 ```typescript
 import { ajax } from 'rxjs/ajax';
 import { map, retry, catchError } from 'rxjs/operators';
@@ -142,8 +142,8 @@ apiData.subscribe({
   error(err) { console.log('errors already caught... will not run'); }
 });
 ```
-{% endcode-tabs-item %}
-{% endcode-tabs %}
+{% endtab %}
+{% endtabs %}
 
 ## Naming conventions for observables
 

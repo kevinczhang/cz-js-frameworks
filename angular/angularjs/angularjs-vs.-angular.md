@@ -54,8 +54,8 @@ Angular is 5 times faster than AngularJS with the change detection mechanism fro
 
 ### AngularJS
 
-{% code-tabs %}
-{% code-tabs-item title="index.html" %}
+{% tabs %}
+{% tab title="index.html" %}
 ```markup
 <!DOCTYPE html>
 <html>
@@ -73,9 +73,9 @@ Angular is 5 times faster than AngularJS with the change detection mechanism fro
 </body>
 </html>
 ```
-{% endcode-tabs-item %}
+{% endtab %}
 
-{% code-tabs-item title="myApp.js" %}
+{% tab title="myApp.js" %}
 ```javascript
 var app = angular.module("myApp", []);
 
@@ -84,15 +84,15 @@ app.controller("myCtrl", function($scope) {
   $scope.lastName = "Doe";
 });
 ```
-{% endcode-tabs-item %}
-{% endcode-tabs %}
+{% endtab %}
+{% endtabs %}
 
 ### **Angular**
 
 **Angular CLI can help to initialize the app.**
 
-{% code-tabs %}
-{% code-tabs-item title="index.html" %}
+{% tabs %}
+{% tab title="index.html" %}
 ```markup
 <!DOCTYPE html>
 <html lang="en">
@@ -108,9 +108,9 @@ app.controller("myCtrl", function($scope) {
 
 </html>
 ```
-{% endcode-tabs-item %}
+{% endtab %}
 
-{% code-tabs-item title="main.ts" %}
+{% tab title="main.ts" %}
 ```typescript
 import { enableProdMode } from '@angular/core';
 import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
@@ -124,9 +124,9 @@ if (environment.production) {
 
 platformBrowserDynamic().bootstrapModule(AppModule);
 ```
-{% endcode-tabs-item %}
+{% endtab %}
 
-{% code-tabs-item title="app.module.ts" %}
+{% tab title="app.module.ts" %}
 ```typescript
 import { BrowserModule }       from '@angular/platform-browser';
 import { FormsModule }         from '@angular/forms';
@@ -159,9 +159,9 @@ import { Logger }              from './logger.service';
 })
 export class AppModule { }
 ```
-{% endcode-tabs-item %}
+{% endtab %}
 
-{% code-tabs-item title="app.component.ts" %}
+{% tab title="app.component.ts" %}
 ```typescript
 import { Component } from '@angular/core';
 
@@ -174,9 +174,9 @@ import { Component } from '@angular/core';
 })
 export class AppComponent { }
 ```
-{% endcode-tabs-item %}
+{% endtab %}
 
-{% code-tabs-item title="hero-list.component.ts" %}
+{% tab title="hero-list.component.ts" %}
 ```typescript
 import { Component, OnInit }   from '@angular/core';
 
@@ -201,9 +201,9 @@ export class HeroListComponent implements OnInit {
   selectHero(hero: Hero) { this.selectedHero = hero; }
 }
 ```
-{% endcode-tabs-item %}
+{% endtab %}
 
-{% code-tabs-item title="hero.service.ts" %}
+{% tab title="hero.service.ts" %}
 ```typescript
 import { Injectable } from '@angular/core';
 
@@ -228,8 +228,8 @@ export class HeroService {
   }
 }
 ```
-{% endcode-tabs-item %}
-{% endcode-tabs %}
+{% endtab %}
+{% endtabs %}
 
 \*\*\*\*
 

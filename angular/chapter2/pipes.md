@@ -36,8 +36,8 @@ The chained hero's birthday is
 
 ## Custom pipes
 
-{% code-tabs %}
-{% code-tabs-item title="exponential-strength.pipe.ts" %}
+{% tabs %}
+{% tab title="exponential-strength.pipe.ts" %}
 ```typescript
 import { Pipe, PipeTransform } from '@angular/core';
 /*
@@ -57,9 +57,9 @@ export class ExponentialStrengthPipe implements PipeTransform {
   }
 }
 ```
-{% endcode-tabs-item %}
+{% endtab %}
 
-{% code-tabs-item title="power-boost-calculator.component.ts" %}
+{% tab title="power-boost-calculator.component.ts" %}
 ```typescript
 import { Component } from '@angular/core';
 
@@ -79,8 +79,8 @@ export class PowerBoostCalculatorComponent {
   factor = 1;
 }
 ```
-{% endcode-tabs-item %}
-{% endcode-tabs %}
+{% endtab %}
+{% endtabs %}
 
 ## Pure and impure pipes
 
