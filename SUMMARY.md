@@ -44,6 +44,7 @@
   * [AngularJS Vs. Angular](angular/angularjs/angularjs-vs.-angular.md)
 * [AngularJS](angular/angularjs/README.md)
   * [Basics](angularjs/expressions.md)
+  * [Built-in Directives](angularjs/built-in-directives.md)
   * [Modules](angularjs/modules.md)
 * [React](react/README.md)
   * [JSX and Element](react/jsx-and-element.md)
