@@ -31,7 +31,37 @@ angular.module('myModule').controller('appservice', function(appservice)
 
 Global functions should be avoided in JavaScript. They can easily be overwritten or destroyed by other scripts. AngularJS modules reduces this problem, by keeping all functions local to the module.
 
-## Create New Directives
+## Controllers
+
+AngularJS controllers **control the data** of AngularJS applications. AngularJS controllers are regular **JavaScript Objects**.
+
+```markup
+<div ng-app="myApp" ng-controller="personCtrl">
+
+First Name: <input type="text" ng-model="firstName"><br>
+Last Name: <input type="text" ng-model="lastName"><br>
+<br>
+Full Name: {{fullName()}}
+
+</div>
+
+<script>
+var app = angular.module('myApp', []);
+app.controller('personCtrl', function($scope) {
+  $scope.firstName = "John";
+  $scope.lastName = "Doe";
+  $scope.fullName = function() {
+    return $scope.firstName + " " + $scope.lastName;
+  };
+});
+</script>
+```
+
+## Services
+
+
+
+## Custom Directives
 
 New directives are created by using the `.directive` function. 
 
@@ -63,29 +93,38 @@ app.directive("w3TestDirective", function() {
 </body>
 ```
 
-## AngularJS Controllers
+## Custom Filters
 
-AngularJS controllers **control the data** of AngularJS applications. AngularJS controllers are regular **JavaScript Objects**.
+You can make your own filters by registering a new filter factory function with your module:
 
 ```markup
-<div ng-app="myApp" ng-controller="personCtrl">
-
-First Name: <input type="text" ng-model="firstName"><br>
-Last Name: <input type="text" ng-model="lastName"><br>
-<br>
-Full Name: {{fullName()}}
-
-</div>
+<ul ng-app="myApp" ng-controller="namesCtrl">
+  <li ng-repeat="x in names">
+    {{x | myFormat}}
+  </li>
+</ul>
 
 <script>
 var app = angular.module('myApp', []);
-app.controller('personCtrl', function($scope) {
-  $scope.firstName = "John";
-  $scope.lastName = "Doe";
-  $scope.fullName = function() {
-    return $scope.firstName + " " + $scope.lastName;
+app.filter('myFormat', function() {
+  return function(x) {
+    var i, c, txt = "";
+    for (i = 0; i < x.length; i++) {
+      c = x[i];
+      if (i % 2 == 0) {
+        c = c.toUpperCase();
+      }
+      txt += c;
+    }
+    return txt;
   };
+});
+app.controller('namesCtrl', function($scope) {
+  $scope.names = ['Jani', 'Carl', 'Margareth', 'Hege', 'Joe', 
+  'Gustav', 'Birgit', 'Mary', 'Kai'];
 });
 </script>
 ```
+
+
 

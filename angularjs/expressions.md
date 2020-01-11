@@ -17,17 +17,11 @@ AngularJS binds data to HTML using Expressions. AngularJS expressions can be wri
 
  AngularJS lets you extend HTML with new attributes called **Directives**. AngularJS directives are extended HTML attributes with the prefix `ng-`.
 
-#### ng-app
+### ng-app: initializes an AngularJS application.
 
-The `ng-app` directive initializes an AngularJS application.
+### ng-init: initializes application data.
 
-#### ng-init
-
-The `ng-init` directive initializes application data.
-
-#### ng-repeat
-
-The `ng-repeat` directive repeats an HTML element
+### ng-repeat: repeats an HTML element
 
 ```markup
 <div ng-app="" ng-init="quantity=1;price=5;names=['Jani','Hege','Kai']">
@@ -47,9 +41,7 @@ Total in dollar: {{ quantity * price }}
 </div>
 ```
 
-#### ng-model
-
-The `ng-model` directive binds the value of HTML controls \(input, select, textarea\) to application data. 
+### ng-model: binds the value of HTML controls to application data. 
 
 The `ng-model` directive can provide type validation for application data \(number, e-mail, required\)
 
@@ -88,6 +80,71 @@ input.ng-invalid {
   Enter your name:
   <input name="myName" ng-model="myText" required>
 </form>
+```
+
+## AngularJS Scope
+
+The scope is the binding part between the HTML \(view\) and the JavaScript \(controller\).
+
+All applications have a `$rootScope` which is the scope created on the HTML element that contains the `ng-app` directive. The rootScope is available in the entire application. If a variable has the same name in both the current scope and in the rootScope, the application uses the one in the current scope.
+
+AngularJS provides filters to transform data:
+
+* `currency` Format a number to a currency format.
+* `date` Format a date to a specified format.
+* `filter` Select a subset of items from an array.
+* `json` Format an object to a JSON string.
+* `limitTo` Limits an array/string, into a specified number of elements/characters.
+* `lowercase` Format a string to lower case.
+* `number` Format a number to a string.
+* `orderBy` Orders an array by an expression.
+* `uppercase` Format a string to upper case.
+
+```markup
+<div ng-app="myApp" ng-controller="personCtrl">
+
+<p>The name is {{ lastName | uppercase }}</p>
+
+</div>
+```
+
+## AngularJS Services
+
+In AngularJS, a service is a function, or object, that is available for, and limited to, your AngularJS application. AngularJS has about 30 built-in services. One of them is the `$location` service.
+
+### $http Service
+
+```javascript
+var app = angular.module('myApp', []);
+app.controller('myCtrl', function($scope, $http) {
+  $http.get("welcome.htm").then(function (response) {
+    $scope.myWelcome = response.data;
+  });
+});
+```
+
+### $timeout Service
+
+```javascript
+var app = angular.module('myApp', []);
+app.controller('myCtrl', function($scope, $timeout) {
+  $scope.myHeader = "Hello World!";
+  $timeout(function () {
+    $scope.myHeader = "How are you today?";
+  }, 2000);
+});
+```
+
+### $interval Service
+
+```javascript
+var app = angular.module('myApp', []);
+app.controller('myCtrl', function($scope, $interval) {
+  $scope.theTime = new Date().toLocaleTimeString();
+  $interval(function () {
+    $scope.theTime = new Date().toLocaleTimeString();
+  }, 1000);
+});
 ```
 
 
