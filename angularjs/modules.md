@@ -31,5 +31,61 @@ angular.module('myModule').controller('appservice', function(appservice)
 
 Global functions should be avoided in JavaScript. They can easily be overwritten or destroyed by other scripts. AngularJS modules reduces this problem, by keeping all functions local to the module.
 
+## Create New Directives
 
+New directives are created by using the `.directive` function. 
+
+To invoke the new directive, make an HTML element with the same tag name as the new directive. When naming a directive, you must use a camel case name, `w3TestDirective`, but when invoking it, you must use `-` separated name, `w3-test-directive.`
+
+The legal restrict values are:
+
+* `E` for Element name
+* `A` for Attribute
+* `C` for Class
+* `M` for Comment
+
+By default the value is `EA`, meaning that both Element names and attribute names can invoke the directive.
+
+```markup
+<body ng-app="myApp">
+
+<w3-test-directive></w3-test-directive>
+
+<script>
+var app = angular.module("myApp", []);
+app.directive("w3TestDirective", function() {
+  return {
+    template : "<h1>Made by a directive!</h1>"
+  };
+});
+</script>
+
+</body>
+```
+
+## AngularJS Controllers
+
+AngularJS controllers **control the data** of AngularJS applications. AngularJS controllers are regular **JavaScript Objects**.
+
+```markup
+<div ng-app="myApp" ng-controller="personCtrl">
+
+First Name: <input type="text" ng-model="firstName"><br>
+Last Name: <input type="text" ng-model="lastName"><br>
+<br>
+Full Name: {{fullName()}}
+
+</div>
+
+<script>
+var app = angular.module('myApp', []);
+app.controller('personCtrl', function($scope) {
+  $scope.firstName = "John";
+  $scope.lastName = "Doe";
+  $scope.fullName = function() {
+    return $scope.firstName + " " + $scope.lastName;
+  };
+});
+</script>
+```
 
