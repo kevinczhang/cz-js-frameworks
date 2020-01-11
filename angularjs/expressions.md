@@ -117,11 +117,25 @@ In AngularJS, a service is a function, or object, that is available for, and lim
 ```javascript
 var app = angular.module('myApp', []);
 app.controller('myCtrl', function($scope, $http) {
-  $http.get("welcome.htm").then(function (response) {
-    $scope.myWelcome = response.data;
+  $http.get("welcome.htm")
+  .then(function(response) {
+    $scope.content = response.data;
+    $scope.statuscode = response.status;
+    $scope.statustext = response.statusText;
+  }, function(response) {
+    // Second function handles error
+    $scope.content = "Something went wrong";
   });
 });
 ```
+
+The response from the server is an object with these properties:
+
+* `.config` the object used to generate the request.
+* `.data` a string, or an object, carrying the response from the server.
+* `.headers` a function to use to get header information.
+* `.status` a number defining the HTTP status.
+* `.statusText` a string defining the HTTP status.
 
 ### $timeout Service
 

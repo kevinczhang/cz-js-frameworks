@@ -57,9 +57,25 @@ app.controller('personCtrl', function($scope) {
 </script>
 ```
 
-## Services
+## Custom Services
 
+```javascript
+app.service('hexafy', function() {
+  this.myFunc = function (x) {
+    return x.toString(16);
+  }
+});
 
+app.controller('myCtrl', function($scope, hexafy) {
+  $scope.hex = hexafy.myFunc(255);
+});
+
+app.filter('myFormat',['hexafy', function(hexafy) {
+  return function(x) {
+    return hexafy.myFunc(x);
+  };
+}]);
+```
 
 ## Custom Directives
 
