@@ -46,6 +46,7 @@
   * [Basics](angularjs/expressions.md)
   * [Built-in Directives](angularjs/built-in-directives.md)
   * [Modules](angularjs/modules.md)
+  * [Events](angularjs/events.md)
 * [React](react/README.md)
   * [JSX and Element](react/jsx-and-element.md)
   * [Components and Props](react/components-and-props.md)
