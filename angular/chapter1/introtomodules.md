@@ -31,7 +31,7 @@ export class AppModule { }
 
 ## 2. NgModules and components
 
-A root NgModule always has a root component that is created during bootstrap, but any NgModule can include any number of additional components, which can be loaded through the router or created through the template. The components that belong to an NgModule share a _compilation_ context provided by their NgModules.
+A NgModule can include any number of additional components, which can be loaded through the router or created through the template. The components that belong to an NgModule share a _compilation_ context provided by their NgModules.
 
-When you create a component, it's associated directly with a single view, called the _**host view**_**.** The host view can be the root of a view hierarchy, which can contain _embedded views_, which are in turn the host views of other components.
+When you create a component, it's associated directly with a single view, called the _host view_. The host view can be the root of a view hierarchy, which can contain _embedded views_, which are in turn the host views of other components.
 
