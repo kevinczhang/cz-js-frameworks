@@ -4,9 +4,7 @@ Angular creates, updates, and destroys components as the user moves through the 
 
 ## Component metadata
 
-The @Component decorator identifies the class immediately below it as a component class, and specifies its metadata.
-
-The metadata for a component tells Angular where to get the major building blocks that it needs to create and present the component and its view.
+The @Component decorator identifies the class immediately below it as a component class, and specifies its metadata. The metadata for a component tells Angular where to get the major building blocks that it needs to create and present the component and its view.
 
 ## Data binding
 
@@ -18,7 +16,7 @@ When Angular renders them, it transforms the DOM according to the instructions g
 
 A component is technically a directive. Angular defines the **@Component\(\)** decorator, which extends the **@Directive\(\)** decorator with template-oriented features.
 
-In addition to components, there are two other kinds of directives: **structural** and **attribute**.
+_**In addition to components**_**,** there are two other kinds of directives: **structural** and **attribute**.
 
 _Structural directives_ alter layout by adding, removing, and replacing elements in the DOM.
 
