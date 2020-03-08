@@ -41,7 +41,7 @@ Sometimes a binding expression will be reported as a type error and it is not po
 
 ### :host
 
-Use the :host pseudo-class selector to target styles in the element that _hosts_ the component \(as opposed to targeting elements _inside_ the component's template\).
+Use the `:`[`host`](https://angular.io/api/core/Directive#host) pseudo-class selector to target styles in the element that _hosts_ the component \(as opposed to targeting elements _inside_ the component's template\).
 
 ```css
 :host(.active) {

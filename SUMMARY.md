@@ -18,6 +18,7 @@
     * [Lifecycle Hooks](angular/chapter2/lifecycle-hooks.md)
     * [Pipes](angular/chapter2/pipes.md)
     * [Dynamic Component Loader](angular/chapter2/dynamic-component-loader.md)
+    * [Angular element](angular/chapter2/angular-element.md)
   * [Forms](angular/forms/README.md)
     * [Reactive Forms](angular/forms/reactive-forms.md)
     * [Form Validation](angular/forms/form-validation.md)
