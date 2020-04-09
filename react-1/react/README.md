@@ -18,7 +18,7 @@ description: >-
 
 ## Popular tools for react corresponding to Angular
 
-![](../.gitbook/assets/image.png)
+![](../../.gitbook/assets/image.png)
 
 ## Definitions
 
