@@ -8,6 +8,8 @@
   * [Vue Instance](vue/vue/vue-instance.md)
   * [Template Syntax](vue/vue/template-syntax.md)
   * [Computed Properties and Watchers](vue/vue/computed-properties-and-watchers.md)
+  * [Class and Style Bindings](vue/vue/class-and-style-bindings.md)
+  * [Conditional Rendering](vue/vue/conditional-rendering.md)
 
 ## Angular <a id="angular-1"></a>
 
