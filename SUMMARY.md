@@ -10,6 +10,8 @@
   * [Computed Properties and Watchers](vue/vue/computed-properties-and-watchers.md)
   * [Class and Style Bindings](vue/vue/class-and-style-bindings.md)
   * [Conditional Rendering](vue/vue/conditional-rendering.md)
+  * [List Rendering](vue/vue/list-rendering.md)
+  * [Event Handling](vue/vue/event-handling.md)
 
 ## Angular <a id="angular-1"></a>
 
