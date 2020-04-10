@@ -56,5 +56,14 @@ new Vue({
 
 ### [Lifecycle Diagram](https://vuejs.org/v2/guide/instance.html#Lifecycle-Diagram) <a id="Lifecycle-Diagram"></a>
 
+1. beforeCreate
+2. created
+3. beforeMount
+4. mounted
+5. beforeUpdate
+6. updated
+7. beforeDestroy
+8. destroyed
+
 ![](../../.gitbook/assets/image%20%282%29.png)
 
