@@ -124,3 +124,10 @@ typeof vm.selected // => 'object'
 vm.selected.number // => 123
 ```
 
+```markup
+<!-- synced after "change" instead of "input" -->
+<input v-model.lazy="msg">
+<input v-model.number="age" type="number">
+<input v-model.trim="msg">
+```
+
