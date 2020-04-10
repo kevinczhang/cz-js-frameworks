@@ -54,5 +54,5 @@ You can cap the bubbling by adding the `@`[`Host`](https://angular.io/api/core/H
 2. **Scenario: multiple edit sessions**
 3. **Scenario: specialized providers**
 
-![](../../../.gitbook/assets/image-1.png)
+![](../../../.gitbook/assets/image-1%20%281%29.png)
 

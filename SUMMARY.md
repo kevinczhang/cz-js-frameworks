@@ -4,7 +4,8 @@
 
 ## Vue
 
-* [Vue](vue/vue.md)
+* [Vue](vue/vue/README.md)
+  * [Vue Instance](vue/vue/vue-instance.md)
 
 ## Angular <a id="angular-1"></a>
 
