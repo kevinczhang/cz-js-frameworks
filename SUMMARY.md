@@ -12,6 +12,7 @@
   * [Conditional Rendering](vue/vue/conditional-rendering.md)
   * [List Rendering](vue/vue/list-rendering.md)
   * [Event Handling](vue/vue/event-handling.md)
+  * [Form Input Bindings](vue/vue/form-input-bindings.md)
 
 ## Angular <a id="angular-1"></a>
 
