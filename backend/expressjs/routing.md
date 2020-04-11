@@ -1,6 +1,8 @@
-# Routing
+# Routing and middleware
 
-## Route methods
+## Routing
+
+### Route methods
 
 ```javascript
 // GET method route
@@ -16,13 +18,13 @@ app.post('/', function (req, res) {
 
  The method, `app.all()`, is not derived from any HTTP method and loads middleware at the specified path for _all_ HTTP request methods.
 
-## Route paths
+### Route paths
 
 Route paths, in combination with a request method, define the endpoints at which requests can be made. Route paths can be strings, string patterns, or regular expressions.
 
 The characters `?`, `+`, `*`, and `()` are subsets of their regular expression counterparts. The hyphen \(`-`\) and the dot \(`.`\) are interpreted literally by string-based paths.
 
-## Route parameters
+### Route parameters
 
 Route parameters are named URL segments that are used to capture the values specified at their position in the URL. The captured values are populated in the `req.params` object, with the name of the route parameter specified in the path as their respective keys.
 
@@ -32,7 +34,7 @@ Request URL: http://localhost:3000/users/34/books/8989
 req.params: { "userId": "34", "bookId": "8989" }
 ```
 
-## app.route\(\)
+### app.route\(\) example
 
 ```javascript
 app.route('/book')
@@ -47,7 +49,7 @@ app.route('/book')
   })
 ```
 
-## express.Router
+### express.Router example \(preferable way\)
 
 ```javascript
 var express = require('express')
@@ -78,5 +80,57 @@ var birds = require('./birds')
 // ...
 
 app.use('/birds', birds)
+```
+
+## Middleware
+
+_Middleware_ functions are functions that have access to the [request object](https://expressjs.com/en/4x/api.html#req) \(`req`\), the [response object](https://expressjs.com/en/4x/api.html#res) \(`res`\), and the `next` function in the application’s request-response cycle. The `next` function is a function in the Express router which, when invoked, executes the middleware succeeding the current middleware.
+
+Middleware functions can perform the following tasks:
+
+* Execute any code.
+* Make changes to the request and the response objects.
+* End the request-response cycle.
+* Call the next middleware in the stack.
+
+```javascript
+var express = require('express')
+var app = express()
+
+var requestTime = function (req, res, next) {
+  req.requestTime = Date.now()
+  next()
+}
+
+app.use(requestTime)
+
+app.get('/', function (req, res) {
+  var responseText = 'Hello World!<br>'
+  responseText += '<small>Requested at: ' + req.requestTime + '</small>'
+  res.send(responseText)
+})
+
+app.listen(3000)
+```
+
+### Configurable middleware
+
+File: `my-middleware.js`
+
+```javascript
+module.exports = function (options) {
+  return function (req, res, next) {
+    // Implement the middleware function based on the options object
+    next()
+  }
+}
+```
+
+The middleware can now be used as shown below.
+
+```javascript
+var mw = require('./my-middleware.js')
+
+app.use(mw({ option1: '1', option2: '2' }))
 ```
 
