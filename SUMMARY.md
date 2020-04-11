@@ -5,12 +5,11 @@
 ## Vue
 
 * [Vue](vue/vue/README.md)
-  * [Vue Instance](vue/vue/vue-instance.md)
-  * [Template Syntax](vue/vue/template-syntax.md)
-  * [Computed Properties and Watchers](vue/vue/computed-properties-and-watchers.md)
-  * [Class and Style Bindings](vue/vue/class-and-style-bindings.md)
-  * [Conditional Rendering](vue/vue/conditional-rendering.md)
-  * [List Rendering](vue/vue/list-rendering.md)
+  * [Rendering](vue/vue/rendering/README.md)
+    * [Computed Properties and Watchers](vue/vue/rendering/computed-properties-and-watchers.md)
+    * [Class and Style Bindings](vue/vue/rendering/class-and-style-bindings.md)
+    * [Conditional Rendering](vue/vue/rendering/conditional-rendering.md)
+    * [List Rendering](vue/vue/rendering/list-rendering.md)
   * [Event Handling](vue/vue/event-handling.md)
   * [Form Input Bindings](vue/vue/form-input-bindings.md)
   * [Components](vue/vue/components.md)

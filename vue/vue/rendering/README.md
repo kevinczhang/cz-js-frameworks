@@ -1,4 +1,6 @@
-# Template Syntax
+# Rendering
+
+## Template Syntax
 
 Vue.js uses an HTML-based template syntax that allows you to declaratively bind the rendered DOM to the underlying Vue instance’s data.
 
@@ -92,4 +94,6 @@ Dynamic argument expressions have some syntax constraints because certain charac
 <!-- shorthand with dynamic argument (2.6.0+) -->
 <a @[event]="doSomething"> ... </a>
 ```
+
+
 
