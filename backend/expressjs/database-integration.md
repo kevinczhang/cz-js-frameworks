@@ -1,6 +1,6 @@
 # Database integration
 
-### MongoDB <a id="mongodb"></a>
+## MongoDB
 
  **Module**: [mongodb](https://github.com/mongodb/node-mongodb-native)
 
