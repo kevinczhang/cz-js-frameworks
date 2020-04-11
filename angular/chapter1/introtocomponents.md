@@ -8,7 +8,7 @@ The @Component decorator identifies the class immediately below it as a componen
 
 ## Data binding
 
-![Logo Title Text 1](../../../.gitbook/assets/databinding.png)
+![Logo Title Text 1](../../.gitbook/assets/databinding.png)
 
 ## Directives
 
