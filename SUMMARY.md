@@ -13,6 +13,7 @@
   * [List Rendering](vue/vue/list-rendering.md)
   * [Event Handling](vue/vue/event-handling.md)
   * [Form Input Bindings](vue/vue/form-input-bindings.md)
+  * [Components](vue/vue/components.md)
 
 ## Angular <a id="angular-1"></a>
 
