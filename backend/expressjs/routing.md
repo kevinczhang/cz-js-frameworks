@@ -134,3 +134,77 @@ var mw = require('./my-middleware.js')
 app.use(mw({ option1: '1', option2: '2' }))
 ```
 
+### Application-level middleware <a id="middleware.application"></a>
+
+ Bind application-level middleware to an instance of the [app object](https://expressjs.com/en/4x/api.html#app) by using the `app.use()` and `app.METHOD()` functions, where `METHOD` is the HTTP method of the request that the middleware function handles \(such as GET, PUT, or POST\) in lowercase.
+
+This example shows a middleware function with no mount path. The function is executed every time the app receives a request.
+
+```javascript
+var app = express()
+
+app.use(function (req, res, next) {
+  console.log('Time:', Date.now())
+  next()
+})
+
+```
+
+ Here is an example of loading a series of middleware functions at a mount point, with a mount path. It illustrates a middleware sub-stack that prints request info for any type of HTTP request to the `/user/:id` path.
+
+```javascript
+app.use('/user/:id', function (req, res, next) {
+  console.log('Request URL:', req.originalUrl)
+  next()
+}, function (req, res, next) {
+  console.log('Request Type:', req.method)
+  next()
+})
+```
+
+ To skip the rest of the middleware functions from a router middleware stack, call `next('route')` to pass control to the next route. **NOTE**: `next('route')` will work only in middleware functions that were loaded by using the `app.METHOD()` or `router.METHOD()` functions.
+
+### Router-level middleware <a id="middleware.router"></a>
+
+```javascript
+var app = express()
+var router = express.Router()
+
+// a middleware function with no mount path. This code is executed for every request to the router
+router.use(function (req, res, next) {
+  console.log('Time:', Date.now())
+  next()
+})
+
+// a middleware sub-stack shows request info for any type of HTTP request to the /user/:id path
+router.use('/user/:id', function (req, res, next) {
+  console.log('Request URL:', req.originalUrl)
+  next()
+}, function (req, res, next) {
+  console.log('Request Type:', req.method)
+  next()
+})
+
+// a middleware sub-stack that handles GET requests to the /user/:id path
+router.get('/user/:id', function (req, res, next) {
+  // if the user ID is 0, skip to the next router
+  if (req.params.id === '0') next('route')
+  // otherwise pass control to the next middleware function in this stack
+  else next()
+}, function (req, res, next) {
+  // render a regular page
+  res.render('regular')
+})
+
+// handler for the /user/:id path, which renders a special page
+router.get('/user/:id', function (req, res, next) {
+  console.log(req.params.id)
+  res.render('special')
+})
+
+// mount the router on the app
+app.use('/', router)
+```
+
+ To skip the rest of the router’s middleware functions, call `next('router')` to pass control back out of the router instance.
+
