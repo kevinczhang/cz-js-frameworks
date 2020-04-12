@@ -72,6 +72,7 @@
 * [NestJS](backend/nestjs/README.md)
   * [Controllers](backend/nestjs/controllers.md)
   * [Providers](backend/nestjs/providers.md)
+  * [Modules](backend/nestjs/modules.md)
 * [ExpressJS](backend/expressjs/README.md)
   * [Routing and middleware](backend/expressjs/routing.md)
   * [Database integration](backend/expressjs/database-integration.md)
