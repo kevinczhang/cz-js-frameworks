@@ -68,5 +68,29 @@ export class CatsModule {}
 
  The `@Global()` decorator makes the module global-scoped. Global modules should be registered **only once**, generally by the root or core module. In the above example, the `CatsService` provider will be ubiquitous, and modules that wish to inject the service will not need to import the `CatsModule` in their imports array.
 
+## **Dynamic modules**
 
+ The Nest module system includes a powerful feature called **dynamic modules**. This feature enables you to easily create customizable modules that can register and configure providers dynamically.
+
+```javascript
+import { Module, DynamicModule } from '@nestjs/common';
+import { createDatabaseProviders } from './database.providers';
+import { Connection } from './connection.provider';
+
+@Module({
+  providers: [Connection],
+})
+export class DatabaseModule {
+  static forRoot(entities = [], options?): DynamicModule {
+    const providers = createDatabaseProviders(options, entities);
+    return {
+      module: DatabaseModule,
+      providers: providers,
+      exports: providers,
+    };
+  }
+}
+```
+
+ If you want to register a dynamic module in the global scope, set the `global` property to `true`.
 
