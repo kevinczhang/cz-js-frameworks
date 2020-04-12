@@ -74,6 +74,7 @@
   * [Providers](backend/nestjs/providers.md)
   * [Modules](backend/nestjs/modules.md)
   * [Middleware](backend/nestjs/middleware.md)
+  * [Exception filters](backend/nestjs/exception-filters.md)
 * [ExpressJS](backend/expressjs/README.md)
   * [Routing and middleware](backend/expressjs/routing.md)
   * [Database integration](backend/expressjs/database-integration.md)
