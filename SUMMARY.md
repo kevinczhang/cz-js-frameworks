@@ -41,6 +41,7 @@
     * [Feature Modules](angular/ngmodules/feature-modules.md)
     * [NgModule metadata](angular/ngmodules/ngmodule-metadata.md)
     * [Providers](angular/ngmodules/providers.md)
+    * [CoreModule vs SharedModule](angular/ngmodules/coremodule-vs-sharedmodule.md)
   * [Dependency Injection](angular/dependency-injection/README.md)
     * [Hierarchical Dependency Injectors](angular/dependency-injection/hierarchical-dependency-injectors.md)
     * [Dependency Injection in Action](angular/dependency-injection/dependency-injection-in-action.md)
