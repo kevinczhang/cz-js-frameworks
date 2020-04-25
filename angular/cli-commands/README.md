@@ -21,5 +21,14 @@ ng generate --help
 
  A single workspace configuration file, `angular.json`, is created at the top level of the workspace.  The [ng config](https://angular.io/cli/config) command lets you set and retrieve configuration values from the command line, or you can edit the `angular.json` file directly.
 
+### CLI command-language syntax <a id="cli-command-language-syntax"></a>
+
+ `ng` _commandNameOrAlias_ _requiredArg_ \[_optionalArg_\] `[options]`
+
+* Most commands, and some options, have aliases. Aliases are shown in the syntax statement for each command.
+* Option names are prefixed with a double dash \(--\). Option aliases are prefixed with a single dash \(-\). Arguments are not prefixed.
+* Typically, the name of a generated artifact can be given as an argument to the command or specified with the --name option.
+* Argument and option names can be given in either [camelCase or dash-case](https://angular.io/guide/glossary#case-types). `--myOptionName` is equivalent to `--my-option-name`.
+
 
 
