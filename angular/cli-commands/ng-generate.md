@@ -477,4 +477,92 @@ Creates a new generic NgModule definition in the given or default project.
       </td>
     </tr>
   </tbody>
+</table>## ng g pipe
+
+Creates a new generic pipe definition in the given or default project.
+
+**Arguments**
+
+| ARGUMENT | DESCRIPTION |
+| :--- | :--- |
+| `<name>` | The name of the pipe. |
+
+**Options**
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align:left">OPTION</th>
+      <th style="text-align:left">DESCRIPTION</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align:left"><code>--export=true|false</code>
+      </td>
+      <td style="text-align:left">
+        <p>When true, the declaring NgModule exports this pipe.</p>
+        <p>Default: <code>false</code>
+        </p>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><code>--flat=true|false</code>
+      </td>
+      <td style="text-align:left">
+        <p>When true (the default) creates files at the top level of the project.</p>
+        <p>Default: <code>true</code>
+        </p>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><code>--module=module</code>
+      </td>
+      <td style="text-align:left">
+        <p>The declaring NgModule.</p>
+        <p>Aliases: -m</p>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><code>--project=project</code>
+      </td>
+      <td style="text-align:left">The name of the project.</td>
+    </tr>
+  </tbody>
+</table>## ng g service
+
+Creates a new, generic service definition in the given or default project.
+
+**Arguments**
+
+| ARGUMENT | DESCRIPTION |
+| :--- | :--- |
+| `<name>` | The name of the service. |
+
+**Options**
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align:left">OPTION</th>
+      <th style="text-align:left">DESCRIPTION</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align:left"><code>--flat=true|false</code>
+      </td>
+      <td style="text-align:left">
+        <p>When true (the default), creates files at the top level of the project.</p>
+        <p>Default: <code>true</code>
+        </p>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><code>--project=project</code>
+      </td>
+      <td style="text-align:left">The name of the project.</td>
+    </tr>
+  </tbody>
 </table>
+
