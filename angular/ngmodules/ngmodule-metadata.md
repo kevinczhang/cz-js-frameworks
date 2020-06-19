@@ -144,3 +144,4 @@ description: The following table summarizes the @NgModule metadata properties.
     </tr>
   </tbody>
 </table>
+

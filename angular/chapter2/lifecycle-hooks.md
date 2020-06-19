@@ -27,7 +27,9 @@ Angular creates it, renders it, creates and renders its children, checks it when
     </tr>
   </thead>
   <tbody></tbody>
-</table><table>
+</table>
+
+<table>
   <thead>
     <tr>
       <th style="text-align:left"><code>ngOnInit()</code>
@@ -40,7 +42,9 @@ Angular creates it, renders it, creates and renders its children, checks it when
     </tr>
   </thead>
   <tbody></tbody>
-</table><table>
+</table>
+
+<table>
   <thead>
     <tr>
       <th style="text-align:left"><code>ngDoCheck()</code>
@@ -53,7 +57,9 @@ Angular creates it, renders it, creates and renders its children, checks it when
     </tr>
   </thead>
   <tbody></tbody>
-</table><table>
+</table>
+
+<table>
   <thead>
     <tr>
       <th style="text-align:left"><code>ngAfterContentInit()</code>
@@ -66,7 +72,9 @@ Angular creates it, renders it, creates and renders its children, checks it when
     </tr>
   </thead>
   <tbody></tbody>
-</table><table>
+</table>
+
+<table>
   <thead>
     <tr>
       <th style="text-align:left"><a href="https://angular.io/api/core/AfterContentChecked#ngAfterContentChecked"><code>ngAfterContentChecked()</code></a>
@@ -78,7 +86,9 @@ Angular creates it, renders it, creates and renders its children, checks it when
     </tr>
   </thead>
   <tbody></tbody>
-</table><table>
+</table>
+
+<table>
   <thead>
     <tr>
       <th style="text-align:left"><code>ngAfterViewInit()</code>
@@ -91,7 +101,9 @@ Angular creates it, renders it, creates and renders its children, checks it when
     </tr>
   </thead>
   <tbody></tbody>
-</table><table>
+</table>
+
+<table>
   <thead>
     <tr>
       <th style="text-align:left"><a href="https://angular.io/api/core/AfterViewChecked#ngAfterViewChecked"><code>ngAfterViewChecked()</code></a>
@@ -104,7 +116,9 @@ Angular creates it, renders it, creates and renders its children, checks it when
     </tr>
   </thead>
   <tbody></tbody>
-</table><table>
+</table>
+
+<table>
   <thead>
     <tr>
       <th style="text-align:left"><code>ngOnDestroy()</code>
@@ -117,7 +131,9 @@ Angular creates it, renders it, creates and renders its children, checks it when
     </tr>
   </thead>
   <tbody></tbody>
-</table>1. To perform complex initializations shortly after construction. \_\_ An `ngOnInit()` is a good place for a component to fetch its initial data. 
+</table>
+
+1. To perform complex initializations shortly after construction. \_\_ An `ngOnInit()` is a good place for a component to fetch its initial data. 
 2. To set up the component after Angular sets the input properties.
 
 Don't fetch data in a component constructor. Constructors should do no more than set the initial local variables to simple values.

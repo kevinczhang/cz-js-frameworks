@@ -35,7 +35,9 @@ There are five general categories of feature modules which tend to fall into the
     </tr>
   </thead>
   <tbody></tbody>
-</table><table>
+</table>
+
+<table>
   <thead>
     <tr>
       <th style="text-align:left">Routed</th>
@@ -60,7 +62,9 @@ There are five general categories of feature modules which tend to fall into the
     </tr>
   </thead>
   <tbody></tbody>
-</table><table>
+</table>
+
+<table>
   <thead>
     <tr>
       <th style="text-align:left">Routing</th>
@@ -93,7 +97,9 @@ There are five general categories of feature modules which tend to fall into the
     </tr>
   </thead>
   <tbody></tbody>
-</table><table>
+</table>
+
+<table>
   <thead>
     <tr>
       <th style="text-align:left">Service</th>
@@ -109,7 +115,9 @@ There are five general categories of feature modules which tend to fall into the
     </tr>
   </thead>
   <tbody></tbody>
-</table><table>
+</table>
+
+<table>
   <thead>
     <tr>
       <th style="text-align:left">Widget</th>
@@ -126,3 +134,4 @@ There are five general categories of feature modules which tend to fall into the
   </thead>
   <tbody></tbody>
 </table>
+

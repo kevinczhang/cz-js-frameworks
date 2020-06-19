@@ -67,7 +67,9 @@ Generates a new basic app definition in the "projects" subfolder of the workspac
       <td style="text-align:left">The view encapsulation strategy to use in the new app.</td>
     </tr>
   </tbody>
-</table>## ng g class
+</table>
+
+## ng g class
 
 Creates a new generic class definition in the given or default project.
 
@@ -101,7 +103,9 @@ Creates a new generic class definition in the given or default project.
       </td>
     </tr>
   </tbody>
-</table>## ng g component
+</table>
+
+## ng g component
 
 Creates a new generic component definition in the given or default project.
 
@@ -183,7 +187,9 @@ Creates a new generic component definition in the given or default project.
       </td>
     </tr>
   </tbody>
-</table>## ng g directive
+</table>
+
+## ng g directive
 
 Creates a new generic directive definition in the given or default project.
 
@@ -240,7 +246,9 @@ Creates a new generic directive definition in the given or default project.
       <td style="text-align:left">The HTML selector to use for this directive.</td>
     </tr>
   </tbody>
-</table>## ng g enum
+</table>
+
+## ng g enum
 
 Generates a new, generic enum definition for the given or default project.
 
@@ -297,7 +305,9 @@ Generates a new, generic route guard definition in the given or default project.
       <td style="text-align:left">The name of the project.</td>
     </tr>
   </tbody>
-</table>## ng g interceptor
+</table>
+
+## ng g interceptor
 
 Creates a new, generic interceptor definition in the given or default project.
 
@@ -332,7 +342,9 @@ Creates a new, generic interceptor definition in the given or default project.
       <td style="text-align:left">The name of the project.</td>
     </tr>
   </tbody>
-</table>## ng g interface
+</table>
+
+## ng g interface
 
 Creates a new generic interface definition in the given or default project.
 
@@ -367,7 +379,9 @@ Creates a new generic interface definition in the given or default project.
       <td style="text-align:left">The name of the project.</td>
     </tr>
   </tbody>
-</table>## ng g library
+</table>
+
+## ng g library
 
 Creates a new generic library project in the current workspace.
 
@@ -408,7 +422,9 @@ Creates a new generic library project in the current workspace.
       </td>
     </tr>
   </tbody>
-</table>## ng g module
+</table>
+
+## ng g module
 
 Creates a new generic NgModule definition in the given or default project.
 
@@ -477,7 +493,9 @@ Creates a new generic NgModule definition in the given or default project.
       </td>
     </tr>
   </tbody>
-</table>## ng g pipe
+</table>
+
+## ng g pipe
 
 Creates a new generic pipe definition in the given or default project.
 
@@ -529,7 +547,9 @@ Creates a new generic pipe definition in the given or default project.
       <td style="text-align:left">The name of the project.</td>
     </tr>
   </tbody>
-</table>## ng g service
+</table>
+
+## ng g service
 
 Creates a new, generic service definition in the given or default project.
 
@@ -565,4 +585,6 @@ Creates a new, generic service definition in the given or default project.
     </tr>
   </tbody>
 </table>
+
+
 

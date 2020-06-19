@@ -56,6 +56,8 @@
     * [Angular Test Bed](angular/unit-testing/angular-test-bed.md)
     * [Http and async](angular/unit-testing/http-and-async.md)
     * [Routing Test](angular/unit-testing/routing-test.md)
+  * [Configuration](angular/configuration/README.md)
+    * [Multiple app project](angular/configuration/multiple-app-project.md)
   * [AngularJS Vs. Angular](angular/angularjs-vs.-angular.md)
 * [React](react/README.md)
   * [JSX and Element](react/jsx-and-element.md)

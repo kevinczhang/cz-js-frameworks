@@ -9,5 +9,5 @@ An app always has at least a _root module_ that enables bootstrapping, and typic
 
 Components define _views_ and use _services_, which provide specific functionality not directly related to views.
 
-![Angular Architecture](../../.gitbook/assets/image-1.png)
+![Angular Architecture](../../.gitbook/assets/image-1%20%281%29.png)
 
