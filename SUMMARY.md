@@ -4,6 +4,8 @@
 
 ## Frontend <a id="vue"></a>
 
+---
+
 * [Vue](vue-1/README.md)
   * [Rendering](vue-1/rendering/README.md)
     * [Computed Properties and Watchers](vue-1/rendering/computed-properties-and-watchers.md)

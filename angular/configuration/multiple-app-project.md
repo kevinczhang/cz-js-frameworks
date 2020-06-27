@@ -1,5 +1,7 @@
 # Multiple app project
 
+Refer: [https://medium.com/disney-streaming/combining-multiple-angular-applications-into-a-single-one-e87d530d6527](https://medium.com/disney-streaming/combining-multiple-angular-applications-into-a-single-one-e87d530d6527)
+
 ```text
 ng new MainProject --createApplication="false"
 cd MainProject
@@ -19,4 +21,46 @@ There are 3 ways to run the app.
 1. `ng serve staff`
 2. Use the project flag. `ng serve --project="staff" --port=4000`
 3. Open the **angular.json** and locate the `defaultProject` at the bottom. Set it to `staff` and run `ng serve`.
+
+## Injecting Sub Apps into Main application <a id="b3cc"></a>
+
+In  **app.module.ts** from any one of our projects
+
+```typescript
+@NgModule({
+  declarations: [
+    AppComponent
+  ],
+  imports: [
+    BrowserModule,
+    AppRoutingModule
+  ],
+  providers: [],
+  bootstrap: [AppComponent]
+})
+export class AppModule { }
+
+@NgModule({})
+export class App1SharedModule{
+  static forRoot(): ModuleWithProviders {
+    return {
+      ngModule: AppModule,
+      providers: []
+    }
+  }
+}
+```
+
+In Main Project app.module.ts
+
+```typescript
+imports: [
+  BrowserModule,
+  AppRoutingModule,
+  App1SharedModule.forRoot(),
+  App2SharedModule.forRoot()
+],
+```
+
+
 
