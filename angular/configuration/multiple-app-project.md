@@ -2,6 +2,8 @@
 
 Refer: [https://medium.com/disney-streaming/combining-multiple-angular-applications-into-a-single-one-e87d530d6527](https://medium.com/disney-streaming/combining-multiple-angular-applications-into-a-single-one-e87d530d6527)
 
+Sample app is : D:\AngularWorkspace\sub-apps-setup-master
+
 ```text
 ng new MainProject --createApplication="false"
 cd MainProject
