@@ -91,5 +91,66 @@ last 2 versions
 
 ## Proxying to a backend server
 
+You can use the proxying support in the `webpack` dev server to divert certain URLs to a backend server, by passing a file to the `--proxy-config` build option. For example, to divert all calls for `http://localhost:4200/api` to a server running on `http://localhost:3000/api`, take the following steps.
 
+1. Create a file `proxy.conf.json` in your project's `src/` folder.
+2. Add the following content to the new proxy file:
+
+   ```text
+   content_copy{
+     "/api": {
+       "target": "http://localhost:3000",
+       "secure": false
+     }
+   }
+   ```
+
+3. In the CLI configuration file, `angular.json`, add the `proxyConfig` option to the `serve` target:
+
+   ```text
+   content_copy...
+   "architect": {
+     "serve": {
+       "builder": "@angular-devkit/build-angular:dev-server",
+       "options": {
+         "browserTarget": "your-application-name:build",
+         "proxyConfig": "src/proxy.conf.json"
+       },
+   ...
+   ```
+
+4. To run the dev server with this proxy configuration, call `ng serve`.
+
+#### Using corporate proxy <a id="using-corporate-proxy"></a>
+
+```text
+npm install --save-dev https-proxy-agent
+```
+
+When you define an environment variable `http_proxy` or `HTTP_PROXY`, an agent is automatically added to pass calls through your corporate proxy when running `npm start`.
+
+Use the following content in the JavaScript configuration file.
+
+```typescript
+content_copyvar HttpsProxyAgent = require('https-proxy-agent');
+var proxyConfig = [{
+  context: '/api',
+  target: 'http://your-remote-server.com:3000',
+  secure: false
+}];
+
+function setupForCorporateProxy(proxyConfig) {
+  var proxyServer = process.env.http_proxy || process.env.HTTP_PROXY;
+  if (proxyServer) {
+    var agent = new HttpsProxyAgent(proxyServer);
+    console.log('Using corporate proxy server: ' + proxyServer);
+    proxyConfig.forEach(function(entry) {
+      entry.agent = agent;
+    });
+  }
+  return proxyConfig;
+}
+
+module.exports = setupForCorporateProxy(proxyConfig);
+```
 
