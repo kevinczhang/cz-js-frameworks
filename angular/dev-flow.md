@@ -1,0 +1,95 @@
+# Dev Flow
+
+## Ahead-of-time \(AOT\) compilation
+
+ The Angular ahead-of-time \(AOT\) compiler converts your Angular HTML and TypeScript code into efficient JavaScript code during the build phase _before_ the browser downloads and runs that code. 
+
+Angular offers two ways to compile your application:
+
+* _**Just-in-Time**_ **\(JIT\)**, which compiles your app in the browser at runtime. This was the default until Angular 8.
+* _**Ahead-of-Time**_ **\(AOT\)**, which compiles your app and libraries at build time. This is the default since Angular 9.
+
+### Advantages
+
+1.  _Faster rendering_ With AOT, the browser downloads a pre-compiled version of the application.
+2.  _Fewer asynchronous requests_ The compiler _inlines_ external HTML templates and CSS style sheets within the application JavaScript, eliminating separate ajax requests for those source files.
+3.  _Smaller Angular framework download size_ There's no need to download the Angular compiler if the app is already compiled. 
+4.  _Detect template errors earlier_ The AOT compiler detects and reports template binding errors during the build step before users can see them.
+5.  _Better security_ AOT compiles HTML templates and components into JavaScript files long before they are served to the client. 
+
+## Configuring application environments
+
+```text
+└── src
+    └── app
+        ├── app.component.html
+        └── app.component.ts
+    └── environments
+        ├── environment.prod.ts
+        ├── environment.staging.ts
+        └── environment.ts
+```
+
+ You can add additional configurations as required. To add a staging environment, create a copy of `src/environments/environment.ts` called `src/environments/environment.staging.ts`, then add a `staging` configuration to `angular.json`:
+
+```text
+"configurations": {
+  "production": { ... },
+  "staging": {
+    "fileReplacements": [
+      {
+        "replace": "src/environments/environment.ts",
+        "with": "src/environments/environment.staging.ts"
+      }
+    ]
+  }
+}
+```
+
+To build using the staging configuration, run the following command:
+
+```text
+ng build --configuration=staging
+```
+
+## Configuring size budgets
+
+As applications grow in functionality, they also grow in size. The CLI allows you to set size thresholds in your configuration to ensure that parts of your application stay within size boundaries that you define.
+
+ Define your size boundaries in the CLI configuration file, `angular.json`, in a `budgets` section for each configured environment.
+
+When you configure a budget, the build system warns or reports an error when a given part of the app reaches or exceeds a boundary size that you set.
+
+## Configuring CommonJS dependencies
+
+ It is recommended that you avoid depending on CommonJS modules in your Angular applications. Depending on CommonJS modules can prevent bundlers and minifiers from optimizing your application, which results in larger bundle sizes. Instead, it is recommended that you use ECMAScript modules in your entire application. 
+
+ The Angular CLI outputs warnings if it detects that your browser application depends on CommonJS modules. To disable these warnings, you can add the CommonJS module name to `allowedCommonJsDependencies` option in the `build` options located in `angular.json` file.
+
+## Configuring browser compatibility
+
+The CLI uses Autoprefixer to ensure compatibility with different browser and browser versions. You may find it necessary to target specific browsers or exclude certain browser versions from your build.
+
+Internally, Autoprefixer relies on a library called Browserslist to figure out which browsers to support with prefixing. Browserlist looks for configuration options in a `browserslist` property of the package configuration file, or in a configuration file named `.browserslistrc`. Autoprefixer looks for the `browserslist` configuration when it prefixes your CSS.
+
+* You can tell Autoprefixer what browsers to target by adding a browserslist property to the package configuration file, `package.json`:
+
+```text
+content_copy"browserslist": [
+  "> 1%",
+  "last 2 versions"
+]
+```
+
+* Alternatively, you can add a new file, `.browserslistrc`, to the project directory, that specifies browsers you want to support:
+
+```text
+content_copy### Supported Browsers
+> 1%
+last 2 versions
+```
+
+## Proxying to a backend server
+
+
+
