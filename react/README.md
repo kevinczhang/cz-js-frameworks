@@ -6,6 +6,21 @@ description: >-
 
 # React
 
+> index.js
+>
+> ```jsx
+> import React from 'react';
+> import ReactDOM from 'react-dom/client';
+>
+> function Hello(props) {
+>   return <h1>Hello World!</h1>;
+> }
+>
+> const container = document.getElementById("root");
+> const root = ReactDOM.createRoot(container);
+> root.render(<Hello />);
+> ```
+
 ## Overview
 
 1. React.js for Static sites; React Native for Mobile; React Desktop for Desktop (Ionic is using Angular); NEXT.js for Server-rendered; React VR for Virtual Reality
