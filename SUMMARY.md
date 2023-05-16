@@ -67,7 +67,7 @@
       * [ng generate](angular/advanced/cli-commands/ng-generate.md)
 * [React](react/README.md)
   * [JSX and Element](react/jsx-and-element.md)
-  * [Components](react/components-and-props/README.md)
+  * [Components](react/components-and-props.md)
     * [Class](react/components-and-props/class.md)
     * [Function](react/components-and-props/function.md)
   * [Life cycle](react/life-cycle.md)

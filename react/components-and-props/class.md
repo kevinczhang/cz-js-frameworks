@@ -73,3 +73,12 @@ When you call `setState()`, React merges the object you provide into the current
 In rare cases you might want a component to hide itself even though it was rendered by another component. To do this return `null` instead of its render output.
 
 Returning `null` from a component’s `render` method does not affect the firing of the component’s lifecycle methods. For instance `componentDidUpdate` will still be called.
+
+## Lifecycle of Components
+
+React has four built-in methods that gets called, in this order, when mounting a component:
+
+1. `constructor()`
+2. `getDerivedStateFromProps()`
+3. `render()`
+4. `componentDidMount()`
