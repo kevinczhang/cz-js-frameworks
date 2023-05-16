@@ -6,7 +6,9 @@ description: >-
 
 # JSX and Element
 
-JSX — Allows us to write HTML like syntax which gets transformed to lightweight JavaScript objects.
+JSX stands for JavaScript XML.
+
+JSX — Allows us to write HTML like syntax which gets transformed to lightweight JavaScript objects. JSX converts HTML tags into react elements.
 
 JSX is quite similar to html and can convert html to JSX using online compiler or htmltojsx on npm.
 
