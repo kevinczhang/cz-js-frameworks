@@ -105,7 +105,7 @@ Angular's `keyframe()` function is similar to keyframes in CSS. Keyframes allow 
 
 #### Offset  <a href="#offset" id="offset"></a>
 
-Keyframes include an _offset_ that defines the point in the animation where each style change occurs. Offsets are relative measures from zero to one, marking the beginning and end of the animation, respectively. _\*\*_Defining offsets for keyframes is optional. If you omit them, evenly spaced offsets are automatically assigned.
+Keyframes include an _offset_ that defines the point in the animation where each style change occurs. Offsets are relative measures from zero to one, marking the beginning and end of the animation, respectively. _\*\*_&#x44;efining offsets for keyframes is optional. If you omit them, evenly spaced offsets are automatically assigned.
 
 ```typescript
 transition('* => active', [

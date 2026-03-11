@@ -6,8 +6,8 @@
 
 Angular offers two ways to compile your application:
 
-* _**Just-in-Time**_** (JIT)**, which compiles your app in the browser at runtime. This was the default until Angular 8.
-* _**Ahead-of-Time**_** (AOT)**, which compiles your app and libraries at build time. This is the default since Angular 9.
+* _**Just-in-Time**_**&#x20;(JIT)**, which compiles your app in the browser at runtime. This was the default until Angular 8.
+* _**Ahead-of-Time**_**&#x20;(AOT)**, which compiles your app and libraries at build time. This is the default since Angular 9.
 
 ### Advantages
 

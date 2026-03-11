@@ -41,7 +41,7 @@ export class VoterComponent {
 {% endtab %}
 
 {% tab title="votetaker.component.ts" %}
-```
+```typescript
 import { Component }      from '@angular/core';
 
 @Component({
@@ -95,7 +95,7 @@ export class NameChildComponent {
 
 _Input_ properties usually receive data values. _Output_ properties expose event producers, such as [`EventEmitter`](https://angular.io/api/core/EventEmitter) objects.
 
-![](<../../../.gitbook/assets/image (7).png>)
+![](<../../.gitbook/assets/image (7).png>)
 
 ## Aliasing input/output properties
 

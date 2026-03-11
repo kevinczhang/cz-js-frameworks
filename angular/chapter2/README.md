@@ -1,5 +1,26 @@
 # Components
 
+Components are the main building block for Angular applications. Each component consists of:
+
+* An HTML template that declares what renders on the page
+* A TypeScript class that defines behavior
+* A CSS selector that defines how the component is used in a template
+* Optionally, CSS styles applied to the template
+
+```typescript
+app.component.ts
+import { Component } from '@angular/core';
+
+@Component({
+  selector: 'app-root',
+  templateUrl: './app.component.html',
+  styleUrls: ['./app.component.scss']
+})
+export class AppComponent {
+  title = 'angular-tutorial';
+}
+```
+
 ## The safe navigation operator ( ?. ) and null property paths
 
 ### **safe navigation operator (**`?.`**)**
@@ -37,29 +58,7 @@ Sometimes a binding expression will be reported as a type error and it is not po
 </div>
 ```
 
-## Special selectors for component styling
-
-### :host
-
-Use the :host pseudo-class selector to target styles in the element that _hosts_ the component (as opposed to targeting elements _inside_ the component's template).
-
-```css
-:host(.active) {
-  border-width: 3px;
-}
-```
-
-### :host-context
-
-Sometimes it's useful to apply styles based on some condition _outside_ of a component's view. The `:host-context()` selector looks for a CSS class in any ancestor of the component host element, up to the document root. The `:host-context()` selector is useful when combined with another selector.
-
-The following example applies a `background-color` style to all `<h2>` elements _inside_ the component, only if some ancestor element has the CSS class `theme-light`.
-
-```css
-:host-context(.theme-light) h2 {
-  background-color: #eef;
-}
-```
+##
 
 ## Dynamic Component example
 

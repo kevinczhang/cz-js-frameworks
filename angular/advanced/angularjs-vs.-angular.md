@@ -4,7 +4,7 @@
 
 **AngularJS**
 
-The architecture of AngularJS is based on model-view-controller (MVC) design. The model is the central component that expresses the application's behavior and manages its data, logic, and rules. The _view_ generates an output based on the information in the _model_. The _controller_ _\*\*_accepts input, converts it into commands and sends the commands to the _model_ and the _view_.
+The architecture of AngularJS is based on model-view-controller (MVC) design. The model is the central component that expresses the application's behavior and manages its data, logic, and rules. The _view_ generates an output based on the information in the _model_. The _controller_ _\*\*_&#x61;ccepts input, converts it into commands and sends the commands to the _model_ and the _view_.
 
 **Angular**
 
@@ -18,7 +18,7 @@ AngularJS is written in JavaScript.
 
 **Angular**
 
-Angular uses Microsoft’s TypeScript language, which is a superset of ECMAScript 6 (ES6). This has the combined advantages of the TypeScript features, like type declarations, and the benefits of ES6, like iterators and lambdas. _\*\*_TypeScript have powerful type checking and object-oriented features.
+Angular uses Microsoft’s TypeScript language, which is a superset of ECMAScript 6 (ES6). This has the combined advantages of the TypeScript features, like type declarations, and the benefits of ES6, like iterators and lambdas. _\*\*_&#x54;ypeScript have powerful type checking and object-oriented features.
 
 ## **Databinding Syntax**
 
