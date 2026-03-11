@@ -110,11 +110,11 @@ Angular provides a number of built-in injection-token constants that you can use
 
 A provider object can associate any of these injection tokens with one or more callback functions that take app-specific initialization actions.
 
-* [PLATFORM\_INITIALIZER](https://angular.io/api/core/PLATFORM\_INITIALIZER): Callback is invoked when a platform is initialized.
-* [APP\_BOOTSTRAP\_LISTENER](https://angular.io/api/core/APP\_BOOTSTRAP\_LISTENER): Callback is invoked for each component that is bootstrapped. The handler function receives the ComponentRef instance of the bootstrapped component.
-*   [APP\_INITIALIZER](https://angular.io/api/core/APP\_INITIALIZER): Callback is invoked before an app is initialized. All registered initializers can optionally return a Promise. All initializer functions that return Promises must be resolved before the application is bootstrapped. If one of the initializers fails to resolves, the application is not bootstrapped.
+* [PLATFORM\_INITIALIZER](https://angular.io/api/core/PLATFORM_INITIALIZER): Callback is invoked when a platform is initialized.
+* [APP\_BOOTSTRAP\_LISTENER](https://angular.io/api/core/APP_BOOTSTRAP_LISTENER): Callback is invoked for each component that is bootstrapped. The handler function receives the ComponentRef instance of the bootstrapped component.
+*   [APP\_INITIALIZER](https://angular.io/api/core/APP_INITIALIZER): Callback is invoked before an app is initialized. All registered initializers can optionally return a Promise. All initializer functions that return Promises must be resolved before the application is bootstrapped. If one of the initializers fails to resolves, the application is not bootstrapped.
 
-    The provider object can have a third option, `multi: true`, which you can use with [`APP_INITIALIZER`](https://angular.io/api/core/APP\_INITIALIZER) to register multiple handlers for the provide event.
+    The provider object can have a third option, `multi: true`, which you can use with [`APP_INITIALIZER`](https://angular.io/api/core/APP_INITIALIZER) to register multiple handlers for the provide event.
 
 ```typescript
 export const APP_TOKENS = [

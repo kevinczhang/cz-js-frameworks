@@ -16,7 +16,7 @@ ng build --prod --project="staff"
 ng build --prod --project="customer"
 ```
 
-## Run the App <a href="#9c77" id="9c77"></a>
+## Run the App <a href="#id-9c77" id="id-9c77"></a>
 
 There are 3 ways to run the app.
 

@@ -20,7 +20,7 @@ export class CoreModule {
 
 &#x20;So why do we need to import that famous module only once ? The reason behind this is that we want everything that’s inside the core module to be a **Singleton** !!! And this is very important if you need your components/services to have only one instance. Some usage examples are the profile service or the **header or footer** components.
 
-## Shared module or Shared feature module <a href="#14be" id="14be"></a>
+## Shared module or Shared feature module <a href="#id-14be" id="id-14be"></a>
 
 The SharedModule in contradiction with the CoreModule is imported in every feature module that needs some shared components.
 
