@@ -6,6 +6,14 @@ description: >-
 
 # Angular
 
+Angular is a development platform, built on TypeScript. As a platform, Angular includes:
+
+* A component-based framework for building scalable web applications
+* A collection of well-integrated libraries that cover a wide variety of features, including routing, forms management, client-server communication, and more
+* A suite of developer tools to help you develop, build, test, and update your code
+
+
+
 Angular is a platform and framework for building single-page client applications in HTML and TypeScript. Angular is written in TypeScript. It implements core and optional functionality as a set of TypeScript libraries that you import into your apps.
 
 The architecture of an Angular application relies on certain fundamental concepts. The basic building blocks are _NgModules_, which provide a compilation context for _components_. NgModules collect related code into functional sets; an Angular app is defined by a set of NgModules. An app always has at least a _root module_ that enables bootstrapping, and typically has many more _feature modules_.
