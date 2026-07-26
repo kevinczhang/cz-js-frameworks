@@ -65,6 +65,12 @@
     * [CLI Commands](angular/cli-commands/README.md)
       * [ng new](angular/cli-commands/ng-new.md)
       * [ng generate](angular/cli-commands/ng-generate.md)
+  * [AngularJS](angular/angularjs/README.md)
+    * [Basics](angular/angularjs/expressions.md)
+    * [Built-in Directives](angular/angularjs/built-in-directives.md)
+    * [Modules](angular/angularjs/modules.md)
+    * [Events](angular/angularjs/events.md)
+    * [Routing](angular/angularjs/routing.md)
 * [React](react/README.md)
   * [JSX and Element](react/jsx-and-element.md)
   * [Components](react/components-and-props.md)
@@ -72,12 +78,6 @@
     * [Function](react/components-and-props/function.md)
   * [Life cycle](react/life-cycle.md)
   * [Redux](react/redux.md)
-* [AngularJS](angularjs/README.md)
-  * [Basics](angularjs/expressions.md)
-  * [Built-in Directives](angularjs/built-in-directives.md)
-  * [Modules](angularjs/modules.md)
-  * [Events](angularjs/events.md)
-  * [Routing](angularjs/routing.md)
 
 ## Backend
 
